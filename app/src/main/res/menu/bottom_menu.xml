@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/bm_home"
         android:title="Home"
-        android:icon="@drawable/home"/>
-
+        android:icon="@drawable/baseline_home_24"/>
     <item
-        android:id="@+id/review"
-        android:title="Review"
-        android:icon="@drawable/review"
-        />
-
+        android:id="@+id/bm_top_review"
+        android:title="Reviews"
+        android:icon="@drawable/baseline_reviews_24"/>
     <item
-        android:title="Order"/>
-
+        android:id="@+id/bm_order"
+        android:title="Order"
+        android:icon="@drawable/order"/>
     <item
-        android:id="@+id/notification"
+        android:id="@+id/bm_notification"
         android:title="Notification"
-        android:icon="@drawable/notification" />
+        android:icon="@drawable/notification"/>
     <item
-        android:id="@+id/profile"
+        android:id="@+id/bm_profile"
         android:title="Profile"
-        android:icon="@drawable/profile" />
+        android:icon="@drawable/profile"/>
 
 </menu>

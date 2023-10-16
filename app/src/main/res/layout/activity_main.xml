@@ -22,7 +22,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
             android:fontFamily="@font/chango"
             android:text="Service"
             android:textColor="#2F4037"
@@ -40,7 +39,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
             android:fontFamily="@font/chango"
             android:text="Venue"
             android:textColor="#272B29"
@@ -57,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/capriola"
-            android:text="It is Buyer Seller Connector App"
+            android:text="Buyer and Seller Connector App"
             android:textSize="15dp" />
 
 
