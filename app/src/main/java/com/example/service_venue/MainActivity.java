@@ -2,7 +2,9 @@ package com.example.service_venue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -11,6 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private static int SPLASH_TIMEOUT = 3000; // Splash screen timeout in milliseconds
     // Variable Declearation
     Animation LeftAnimation, RightAnimation,Bottomanimation;
     TextView Service, Venue, Slogan;
@@ -35,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
         Service.setAnimation(LeftAnimation);
         Venue.setAnimation(RightAnimation);
         Slogan.setAnimation(Bottomanimation);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Start LoginActivity after the splash screen timeout
+                Intent loginIntent = new Intent(MainActivity.this, login.class);
+                startActivity(loginIntent);
+
+                // Close the splash screen activity
+                finish();
+            }
+        },SPLASH_TIMEOUT);
 
     }
 }
