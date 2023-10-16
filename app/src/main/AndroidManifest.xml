@@ -19,24 +19,8 @@
             android:name=".PersonalProfessionalSignup"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".PersonaSignup"
-            android:exported="false" />
-        <activity
-            android:name=".Personal_signup"
-            android:exported="false" />
-        <activity
             android:name=".login"
             android:exported="false" />
-        <activity
-            android:name=".HomePageActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
