@@ -4,6 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".personal_signup">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp"
+            android:background="@drawable/buttoncolors">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIGN UP"
+                android:textSize="35sp"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttoncolors"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:hint="Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttoncolors"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:hint="Email"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"/>
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttoncolors"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:hint="Phone Number"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttoncolors"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:hint="password"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"/>
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttoncolors"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:hint="Confrim Password"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"/>
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttoncolors"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:hint="Address"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:drawablePadding="8dp"/>
+            <Button
+                android:id="@+id/SignupButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="SIGN UP"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                app:cornerRadius = "20dp"/>
+            <TextView
+                android:id="@+id/sing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Don't have an account? Singup"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>
