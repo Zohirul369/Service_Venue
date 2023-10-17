@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A service provider app"
+        android:text="Buyer and Seller Connector App"
         android:textSize="16sp"
         android:layout_marginBottom="16dp"/>
 

@@ -8,12 +8,13 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/pastel_mints"
-    tools:context=".SplashScreen">
+    tools:context=".Splash_Screen">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/logo_service"

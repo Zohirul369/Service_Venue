@@ -9,8 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-public class SplashScreen extends AppCompatActivity {
-
+public class Splash_Screen extends AppCompatActivity {
     private static int SPLASH_TIMEOUT = 3000; // Splash screen timeout in milliseconds
 
     Animation LeftAnimation, RightAnimation, Bottomanimation;
