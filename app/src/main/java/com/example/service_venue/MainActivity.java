@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
@@ -25,9 +26,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final int PICK_IMAGE_REQUEST = 1;
     private DrawerLayout drawerLayout;
 
     ImageView profileDoubleCircle;
@@ -75,6 +78,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         profiile_showTxt = findViewById(R.id.profiile_showTxt);
         profile_dateTxt = findViewById(R.id.profile_dateTxt);
         profile_pen = findViewById(R.id.profile_pen);
+
+        profile_pen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openImagePicker();
+            }
+        });
+
 
         profile_dateTxt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +140,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
+
+
+    //Here end the onCreate Method
+
+
+    private void openImagePicker() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null){
+            Uri selectedImageUri = data.getData();
+
+
+            Picasso.get().load(selectedImageUri).into(profileImg);
+        }
+    }
+
 
 
     private void openDialog() {
