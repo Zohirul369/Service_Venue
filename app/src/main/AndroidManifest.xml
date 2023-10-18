@@ -22,10 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".professional_signup"
-            android:exported="false" />
-        <activity
-            android:name=".personalsignup"
+            android:name=".PersonalSignup"
             android:exported="false" />
         <activity
             android:name=".PersonalProfessionalSignup"
