@@ -7,14 +7,20 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,12 +30,89 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout drawerLayout;
 
+    ImageView profileDoubleCircle;
+    ImageView profileBack;
+
+    ImageView profile_pen;
+    ImageView profileImg;
+    TextView profileJob;
+    ImageView profileRating;
+    TextView profileNameTxt;
+    EditText profileNameEdt;
+    TextView profilePhoneTxt;
+    TextView profilePhoneEdt;
+    TextView profileEmailTxt;
+    EditText profileEmailEdt;
+    TextView profileGenderTxt;
+    RadioGroup radioGender;
+    RadioButton radioMale;
+    RadioButton radioFemale;
+    private TextView profiile_showTxt;
+    private TextView profile_dateTxt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+        profileDoubleCircle = findViewById(R.id.profile_double_circle);
+        profileBack = findViewById(R.id.profile_back);
+        profileImg = findViewById(R.id.profile_img);
+        profileJob = findViewById(R.id.profile_job);
+        profileRating = findViewById(R.id.profile_rating);
+        profileNameTxt = findViewById(R.id.profile_name_txt);
+        profileNameEdt = findViewById(R.id.profile_name_edt);
+        profilePhoneTxt = findViewById(R.id.profile_phone_txt);
+        profilePhoneEdt = findViewById(R.id.profile_phone_edt);
+        profileEmailTxt = findViewById(R.id.profile_email_txt);
+        profileEmailEdt = findViewById(R.id.profile_email_edt);
+        profileGenderTxt = findViewById(R.id.profile_gender_txt);
+        radioGender = findViewById(R.id.radioGender);
+        radioMale = findViewById(R.id.radioMale);
+        radioFemale = findViewById(R.id.radioFemale);
+        profiile_showTxt = findViewById(R.id.profiile_showTxt);
+        profile_dateTxt = findViewById(R.id.profile_dateTxt);
+        profile_pen = findViewById(R.id.profile_pen);
+
+        profile_dateTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openDialog();
+            }
+        });
+
+        profileGenderTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the visibility of radio buttons
+                if (radioGender.getVisibility() == View.VISIBLE){
+                    radioGender.setVisibility(View.VISIBLE);
+                } else {
+                    radioGender.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        // Handle radio button selection
+        radioGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radioMale) {
+                    profileGenderTxt.setText("Gender \nMale");
+
+                } else if (checkedId == R.id.radioFemale) {
+                    profileGenderTxt.setText("Gender \nFemale");
+
+                }
+                // Hide the radio buttons
+                radioGender.setVisibility(View.GONE);
+            }
+        });
+
+
 
         Toolbar toolbar = findViewById(R.layout.activity_main);
         setSupportActionBar(toolbar);
@@ -46,6 +129,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
+
+
+    private void openDialog() {
+        DatePickerDialog dialog = new DatePickerDialog(this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int Year, int Month, int Day) {
+                // Handle the selected date
+                String selectedDate = Year + "-" + (Month + 1) + "-" + Day;
+//                profiile_showTxt.setText("Date of Birth: " + selectedDate);
+                profile_dateTxt.setText(selectedDate); // Set text in the TextView
+            }
+        }, 2023, 0, 1);
+
+        dialog.show();
+    }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
