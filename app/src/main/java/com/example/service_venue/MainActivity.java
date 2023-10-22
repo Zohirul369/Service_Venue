@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -25,6 +28,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.Picasso;
 
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private static final int PICK_IMAGE_REQUEST = 1;
     private DrawerLayout drawerLayout;
+    BottomNavigationView bottomNavigationView;
 
     ImageView profileDoubleCircle;
     ImageView profileBack;
@@ -57,8 +63,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
 
         profileDoubleCircle = findViewById(R.id.profile_double_circle);
         profileBack = findViewById(R.id.profile_back);
@@ -78,6 +85,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         profiile_showTxt = findViewById(R.id.profiile_showTxt);
         profile_dateTxt = findViewById(R.id.profile_dateTxt);
         profile_pen = findViewById(R.id.profile_pen);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
 
         profile_pen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 // Toggle the visibility of radio buttons
-                if (radioGender.getVisibility() == View.VISIBLE){
+                if (radioGender.getVisibility() == View.VISIBLE) {
                     radioGender.setVisibility(View.VISIBLE);
                 } else {
                     radioGender.setVisibility(View.VISIBLE);
@@ -124,26 +135,42 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
 
-
-        Toolbar toolbar = findViewById(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
+        replaceFragment(new Home_Fragment());
+
+        bottomNavigationView.setBackground(null);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            int itemId = item.getItemId();
+            if (itemId == R.id.bm_help) {
+                replaceFragment(new Home_Fragment());
+            } else if (itemId == R.id.bm_top_review) {
+                replaceFragment(new ReviewFragment());
+            } else if (itemId == R.id.bm_profile) {
+                replaceFragment(new ProfileFragment());
+            } else if (itemId == R.id.bm_order) {
+                replaceFragment(new OrderFragment());
+            }
+
+            return true;
+        });
+
     }
 
-
-    //Here end the onCreate Method
-
+    //=========================Here end the onCreate Method============================
+//=====================================================================================
+//=====================================================================================
 
     private void openImagePicker() {
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -155,15 +182,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null){
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
             Uri selectedImageUri = data.getData();
 
 
             Picasso.get().load(selectedImageUri).into(profileImg);
         }
     }
-
-
 
     private void openDialog() {
         DatePickerDialog dialog = new DatePickerDialog(this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
@@ -178,8 +203,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         dialog.show();
     }
-
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -198,6 +221,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
+    }
+
+
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
