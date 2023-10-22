@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 public class Splash_Screen extends AppCompatActivity {
-    private static int SPLASH_TIMEOUT = 3000; // Splash screen timeout in milliseconds
+    private static int SPLASH_TIMEOUT = 4000; // Splash screen timeout in milliseconds
 
     Animation LeftAnimation, RightAnimation, Bottomanimation;
     TextView Service, Venue, Slogan;
@@ -23,7 +23,7 @@ public class Splash_Screen extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        //Animation
+        Animation
         LeftAnimation = AnimationUtils.loadAnimation(this, R.anim.left_animation);
         RightAnimation = AnimationUtils.loadAnimation(this, R.anim.right_animation);
         Bottomanimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
