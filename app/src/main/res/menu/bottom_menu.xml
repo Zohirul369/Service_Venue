@@ -14,8 +14,8 @@
         android:title="Order"
         android:icon="@drawable/order"/>
     <item
-        android:id="@+id/bm_notification"
-        android:title="Notification"
+        android:id="@+id/bm_help"
+        android:title="Help"
         android:icon="@drawable/notification"/>
     <item
         android:id="@+id/bm_profile"
