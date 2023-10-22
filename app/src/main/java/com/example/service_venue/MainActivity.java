@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             int itemId = item.getItemId();
-            if (itemId == R.id.bm_help) {
+            if (itemId == R.id.bm_home) {
                 replaceFragment(new Home_Fragment());
             } else if (itemId == R.id.bm_top_review) {
                 replaceFragment(new ReviewFragment());
