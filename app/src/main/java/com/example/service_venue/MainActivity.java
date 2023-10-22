@@ -18,48 +18,19 @@ import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
+
+
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import com.google.android.material.navigation.NavigationView;
-import com.squareup.picasso.Picasso;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-   // private static final int PICK_IMAGE_REQUEST = 1;
-
-    private DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
-
-    ImageView profileDoubleCircle;
-    ImageView profileBack;
-
-    //ImageView profile_pen;
-    ImageView profileImg;
-    TextView profileJob;
-    ImageView profileRating;
-    TextView profileNameTxt;
-    EditText profileNameEdt;
-    TextView profilePhoneTxt;
-    TextView profilePhoneEdt;
-    TextView profileEmailTxt;
-    EditText profileEmailEdt;
-    TextView profileGenderTxt;
-    RadioGroup radioGender;
-    RadioButton radioMale;
-    RadioButton radioFemale;
-    private TextView profiile_showTxt;
-    private TextView profile_dateTxt;
-
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,35 +39,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
 
-        profileDoubleCircle = findViewById(R.id.profile_double_circle);
-        profileBack = findViewById(R.id.profile_back);
-        profileImg = findViewById(R.id.profile_img);
-        profileJob = findViewById(R.id.profile_job);
-        profileRating = findViewById(R.id.profile_rating);
-        profileNameTxt = findViewById(R.id.profile_name_txt);
-        profileNameEdt = findViewById(R.id.profile_name_edt);
-        profilePhoneTxt = findViewById(R.id.profile_phone_txt);
-        profilePhoneEdt = findViewById(R.id.profile_phone_edt);
-        profileEmailTxt = findViewById(R.id.profile_email_txt);
-        profileEmailEdt = findViewById(R.id.profile_email_edt);
-//        profileGenderTxt = findViewById(R.id.profile_gender_txt);
-//        radioGender = findViewById(R.id.radioGender);
-//        radioMale = findViewById(R.id.radioMale);
-//        radioFemale = findViewById(R.id.radioFemale);
-//        profiile_showTxt = findViewById(R.id.profiile_showTxt);
-//        profile_dateTxt = findViewById(R.id.profile_dateTxt);
-       // profile_pen = findViewById(R.id.profile_pen);
+
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-//        profile_pen.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openImagePicker();
-//            }
-//        });
+
 
 
 //        profile_dateTxt.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //            }
 //        });
 
-
+        drawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
@@ -175,23 +123,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //=====================================================================================
 //=====================================================================================
 
-//    private void openImagePicker() {
-//        Intent intent = new Intent(Intent.ACTION_PICK);
-//        intent.setType("image/*");
-//        startActivityForResult(intent, PICK_IMAGE_REQUEST);
-//    }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
-//            Uri selectedImageUri = data.getData();
-//
-//
-//            Picasso.get().load(selectedImageUri).into(profileImg);
-//        }
-//    }
+
 
 //    private void openDialog() {
 //        DatePickerDialog dialog = new DatePickerDialog(this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
