@@ -44,8 +44,6 @@ public class Splash_Screen extends AppCompatActivity {
                 Intent loginIntent = new Intent(Splash_Screen.this, PersonalProfessionalSignup.class);
                  startActivity(loginIntent);
 
-
-
                 // Close the splash screen activity
                 finish();
             }
