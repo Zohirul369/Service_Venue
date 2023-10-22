@@ -211,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/profiile_showTxt"
                 android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="Date"
+                android:text="2023-01-18"
                 android:textColor="#3C3C43"
                 android:textSize="16sp" />
 
@@ -292,6 +292,15 @@
                 android:layout_height="wrap_content"
                 android:text=" "
                 android:textSize="17sp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="16sp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
