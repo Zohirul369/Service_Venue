@@ -4,11 +4,11 @@
     <item
         android:id="@+id/bm_home"
         android:title="Home"
-        android:icon="@drawable/baseline_home_24"/>
+        android:icon="@drawable/home"/>
     <item
         android:id="@+id/bm_top_review"
         android:title="Reviews"
-        android:icon="@drawable/baseline_reviews_24"/>
+        android:icon="@drawable/review"/>
     <item
         android:id="@+id/bm_order"
         android:title="Order"
