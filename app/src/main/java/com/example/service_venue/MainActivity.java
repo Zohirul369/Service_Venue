@@ -35,14 +35,15 @@ import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private static final int PICK_IMAGE_REQUEST = 1;
+   // private static final int PICK_IMAGE_REQUEST = 1;
+
     private DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
 
     ImageView profileDoubleCircle;
     ImageView profileBack;
 
-    ImageView profile_pen;
+    //ImageView profile_pen;
     ImageView profileImg;
     TextView profileJob;
     ImageView profileRating;
@@ -78,61 +79,61 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         profilePhoneEdt = findViewById(R.id.profile_phone_edt);
         profileEmailTxt = findViewById(R.id.profile_email_txt);
         profileEmailEdt = findViewById(R.id.profile_email_edt);
-        profileGenderTxt = findViewById(R.id.profile_gender_txt);
-        radioGender = findViewById(R.id.radioGender);
-        radioMale = findViewById(R.id.radioMale);
-        radioFemale = findViewById(R.id.radioFemale);
-        profiile_showTxt = findViewById(R.id.profiile_showTxt);
-        profile_dateTxt = findViewById(R.id.profile_dateTxt);
-        profile_pen = findViewById(R.id.profile_pen);
+//        profileGenderTxt = findViewById(R.id.profile_gender_txt);
+//        radioGender = findViewById(R.id.radioGender);
+//        radioMale = findViewById(R.id.radioMale);
+//        radioFemale = findViewById(R.id.radioFemale);
+//        profiile_showTxt = findViewById(R.id.profiile_showTxt);
+//        profile_dateTxt = findViewById(R.id.profile_dateTxt);
+       // profile_pen = findViewById(R.id.profile_pen);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        profile_pen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openImagePicker();
-            }
-        });
+//        profile_pen.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openImagePicker();
+//            }
+//        });
 
 
-        profile_dateTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                openDialog();
-            }
-        });
-
-        profileGenderTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Toggle the visibility of radio buttons
-                if (radioGender.getVisibility() == View.VISIBLE) {
-                    radioGender.setVisibility(View.VISIBLE);
-                } else {
-                    radioGender.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        // Handle radio button selection
-        radioGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.radioMale) {
-                    profileGenderTxt.setText("Gender \nMale");
-
-                } else if (checkedId == R.id.radioFemale) {
-                    profileGenderTxt.setText("Gender \nFemale");
-
-                }
-                // Hide the radio buttons
-                radioGender.setVisibility(View.GONE);
-            }
-        });
+//        profile_dateTxt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                openDialog();
+//            }
+//        });
+//
+//        profileGenderTxt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Toggle the visibility of radio buttons
+//                if (radioGender.getVisibility() == View.VISIBLE) {
+//                    radioGender.setVisibility(View.VISIBLE);
+//                } else {
+//                    radioGender.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        });
+//
+//        // Handle radio button selection
+//        radioGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                if (checkedId == R.id.radioMale) {
+//                    profileGenderTxt.setText("Gender \nMale");
+//
+//                } else if (checkedId == R.id.radioFemale) {
+//                    profileGenderTxt.setText("Gender \nFemale");
+//
+//                }
+//                // Hide the radio buttons
+//                radioGender.setVisibility(View.GONE);
+//            }
+//        });
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -157,10 +158,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 replaceFragment(new Home_Fragment());
             } else if (itemId == R.id.bm_top_review) {
                 replaceFragment(new ReviewFragment());
-            } else if (itemId == R.id.bm_profile) {
-                replaceFragment(new ProfileFragment());
             } else if (itemId == R.id.bm_order) {
                 replaceFragment(new OrderFragment());
+            } else if (itemId == R.id.bm_help) {
+                replaceFragment(new HelpFragment());
+            } else if (itemId == R.id.bm_profile) {
+                replaceFragment(new ProfileFragment());
             }
 
             return true;
@@ -172,37 +175,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //=====================================================================================
 //=====================================================================================
 
-    private void openImagePicker() {
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");
-        startActivityForResult(intent, PICK_IMAGE_REQUEST);
-    }
+//    private void openImagePicker() {
+//        Intent intent = new Intent(Intent.ACTION_PICK);
+//        intent.setType("image/*");
+//        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+//    }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+//            Uri selectedImageUri = data.getData();
+//
+//
+//            Picasso.get().load(selectedImageUri).into(profileImg);
+//        }
+//    }
 
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
-            Uri selectedImageUri = data.getData();
-
-
-            Picasso.get().load(selectedImageUri).into(profileImg);
-        }
-    }
-
-    private void openDialog() {
-        DatePickerDialog dialog = new DatePickerDialog(this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int Year, int Month, int Day) {
-                // Handle the selected date
-                String selectedDate = Year + "-" + (Month + 1) + "-" + Day;
-//                profiile_showTxt.setText("Date of Birth: " + selectedDate);
-                profile_dateTxt.setText(selectedDate); // Set text in the TextView
-            }
-        }, 2023, 0, 1);
-
-        dialog.show();
-    }
+//    private void openDialog() {
+//        DatePickerDialog dialog = new DatePickerDialog(this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker view, int Year, int Month, int Day) {
+//                // Handle the selected date
+//                String selectedDate = Year + "-" + (Month + 1) + "-" + Day;
+////                profiile_showTxt.setText("Date of Birth: " + selectedDate);
+//                profile_dateTxt.setText(selectedDate); // Set text in the TextView
+//            }
+//        }, 2023, 0, 1);
+//
+//        dialog.show();
+//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
