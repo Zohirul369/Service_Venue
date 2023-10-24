@@ -1,323 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true"
-
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ProfileFragment">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/profile_location_img"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/profile_double_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/double_circle" />
+
+    <ImageView
+        android:id="@+id/profile_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/profile_double_circle"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/profile_pen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_img"
+        android:layout_marginTop="-15dp"
+
+        android:layout_marginLeft="170dp"
+        android:src="@drawable/pen" />
+
+    <TextView
+        android:id="@+id/profile_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:text="Plumber"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/profile_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_job"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/rating" />
+
+    <TextView
+        android:id="@+id/profile_name_txt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_rating"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:text="Name"
+        android:textColor="@color/grey"
+        android:textSize="16sp" />
 
-        <ImageView
-            android:id="@+id/profile_location_img"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/location" />
+    <EditText
+        android:id="@+id/profile_name_edt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/profile_name_txt"
+        android:layout_marginStart="15dp"
+        android:drawablePadding="18dp"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="#3C3C43"
+        android:textColorHint="#DD4A4A50"
+        android:textSize="18sp"
+        android:textStyle="normal" />
 
-        <ImageView
-            android:id="@+id/profile_double_circle"
+
+    <TextView
+        android:id="@+id/profile_phone_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_name_edt"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:text="Phone Number"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/profile_phone_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_phone_txt"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:text="+8801631913518"
+        android:textColor="#3C3C43"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/profile_email_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_phone_edt"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:text="Email"
+        android:textColor="@color/grey"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/profile_email_edt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/profile_email_txt"
+        android:layout_marginHorizontal="18dp"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:textColor="#3C3C43"
+        android:textColorHint="#DD4A4A50"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/profile_gender_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_email_edt"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:text="Gender"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_gender_txt"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+
+        >
+
+        <RadioButton
+            android:id="@+id/radioMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/double_circle" />
-
-        <ImageView
-            android:id="@+id/profile_back"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/profile_img"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_below="@+id/profile_double_circle"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/profile" />
-
-        <ImageView
-            android:id="@+id/profile_pen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_img"
-            android:layout_marginLeft="170dp"
-
-            android:layout_marginTop="-15dp"
-            android:src="@drawable/pen" />
-
-        <TextView
-            android:id="@+id/profile_job"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_img"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:checked="true"
             android:fontFamily="@font/sf_pro_text_semibold"
-            android:text="Plumber"
-            android:textSize="15sp" />
+            android:text="Male" />
 
-        <ImageView
-            android:id="@+id/profile_rating"
+        <RadioButton
+            android:id="@+id/radioFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_job"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/rating" />
-
-        <TextView
-            android:id="@+id/profile_name_txt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_rating"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_text_medium"
-            android:text="Name"
-            android:textColor="@color/grey"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/profile_name_edt"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_below="@+id/profile_name_txt"
-            android:layout_marginStart="15dp"
-            android:drawablePadding="18dp"
             android:fontFamily="@font/sf_pro_text_semibold"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            android:textColor="#3C3C43"
-            android:textColorHint="#DD4A4A50"
-            android:textSize="18sp"
-            android:textStyle="normal" />
+            android:text="Female" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/profiile_showTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGender"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:text="Date of Birth "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/profile_dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profiile_showTxt"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:text="Date"
+        android:textColor="#3C3C43"
+        android:textSize="17sp" />
 
 
-        <TextView
-            android:id="@+id/profile_phone_txt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_name_edt"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/sf_pro_text_medium"
-            android:text="Phone Number"
-            android:textColor="@color/grey"
-            android:textSize="16sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/profile_phone_edt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_phone_txt"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/sf_pro_text_medium"
-            android:text="+8801631913518"
-            android:textColor="#3C3C43"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/profile_email_txt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_phone_edt"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_text_medium"
-            android:text="Email"
-            android:textColor="@color/grey"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/profile_email_edt"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:layout_below="@+id/profile_email_txt"
-            android:layout_marginHorizontal="18dp"
-            android:fontFamily="@font/sf_pro_text_semibold"
-            android:hint="Enter your email"
-            android:inputType="textEmailAddress"
-            android:textColor="#3C3C43"
-            android:textColorHint="#DD4A4A50"
-            android:textSize="18sp" />
-
-
-        <TextView
-            android:id="@+id/profile_gender_txt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_email_edt"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_text_medium"
-            android:text="Gender"
-            android:textSize="16sp" />
-
-        <RadioGroup
-            android:id="@+id/radioGender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_gender_txt"
-            android:layout_alignParentLeft="true"
-            android:visibility="gone"
-
-            >
-
-            <RadioButton
-                android:id="@+id/radioMale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:checked="true"
-                android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="Male" />
-
-            <RadioButton
-                android:id="@+id/radioFemale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="Female" />
-        </RadioGroup>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/profile_date"
-            android:layout_below="@+id/radioGender">
-
-            <TextView
-                android:id="@+id/profiile_showTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGender"
-                android:fontFamily="@font/sf_pro_text_medium"
-                android:text="Date of Birth: "
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/profile_dateTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/profiile_showTxt"
-                android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="2023-01-18"
-                android:textColor="#3C3C43"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_date"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/profile_completed_work"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="Completed Work: "
-                android:textSize="17sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_pro_text_medium"
-                android:text="17"
-                android:textSize="17sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_completed_work"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/profile_due_work"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="Due Work: "
-                android:textSize="17sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_pro_text_medium"
-                android:text="5"
-                android:textSize="17sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_due_work"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/profile_payment_method"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sf_pro_text_semibold"
-                android:text="Payment Method: "
-                android:textSize="17sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" "
-                android:textSize="17sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" "
-                android:textSize="17sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" "
-                android:textSize="17sp" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:textSize="16sp"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" "
-                android:textSize="17sp" />
-
-
-        </LinearLayout>
-
-
-
-
-
-
-
-
-    </RelativeLayout>
-
-
-</ScrollView>
+</RelativeLayout>
