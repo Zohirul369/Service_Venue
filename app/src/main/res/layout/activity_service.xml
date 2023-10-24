@@ -33,7 +33,6 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/plumber_pro"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -47,7 +46,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/plumner_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -55,7 +53,6 @@
                         android:textSize="25dp" />
 
                     <RatingBar
-                        android:id="@+id/Plumber_ratingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -71,7 +68,6 @@
 
 
                     <TextView
-                        android:id="@+id/plumber_rate"
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -79,7 +75,6 @@
                         android:textSize="20dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -95,7 +90,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/plumber_pro"
+
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -109,7 +104,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/plumner_name"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -117,7 +112,7 @@
                         android:textSize="25dp" />
 
                     <RatingBar
-                        android:id="@+id/Plumber_ratingBar"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -133,7 +128,7 @@
 
 
                     <TextView
-                        android:id="@+id/plumber_rate"
+
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -141,7 +136,7 @@
                         android:textSize="20dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -157,7 +152,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/plumber_pro"
+
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -171,7 +166,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/plumner_name"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -179,7 +174,7 @@
                         android:textSize="25dp" />
 
                     <RatingBar
-                        android:id="@+id/Plumber_ratingBar"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -195,7 +190,7 @@
 
 
                     <TextView
-                        android:id="@+id/plumber_rate"
+
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -203,7 +198,7 @@
                         android:textSize="20dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -219,7 +214,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/plumber_pro"
+
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -233,7 +228,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/plumner_name"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -241,7 +236,7 @@
                         android:textSize="25dp" />
 
                     <RatingBar
-                        android:id="@+id/Plumber_ratingBar"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -257,7 +252,7 @@
 
 
                     <TextView
-                        android:id="@+id/plumber_rate"
+
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -265,7 +260,7 @@
                         android:textSize="20dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -281,7 +276,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/plumber_pro"
+
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -295,7 +290,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/plumner_name"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -303,7 +298,7 @@
                         android:textSize="25dp" />
 
                     <RatingBar
-                        android:id="@+id/Plumber_ratingBar"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -319,7 +314,7 @@
 
 
                     <TextView
-                        android:id="@+id/plumber_rate"
+
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -327,7 +322,7 @@
                         android:textSize="20dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -343,7 +338,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/plumber_pro"
+
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
@@ -357,7 +352,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/plumner_name"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -365,37 +360,13 @@
                         android:textSize="25dp" />
 
                     <RatingBar
-                        android:id="@+id/Plumber_ratingBar"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:verticalScrollbarPosition="defaultPosition" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:id="@+id/plumber_rate"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="20dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
 
             </LinearLayout>
 
