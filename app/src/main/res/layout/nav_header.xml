@@ -6,30 +6,27 @@
     android:layout_height="176dp"
     android:gravity="bottom"
     android:padding="16dp"
-
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo1"/>
+        android:src="@drawable/logo"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Service Vennue"
-        android:textSize="18sp"
-        android:fontFamily="@font/sf_pro_text_semibold"
         android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buyer and Seller Connector App"
-        android:textSize="16sp"
         android:textColor="@color/black"
-        android:fontFamily="@font/sf_pro_text_medium"
-        android:layout_marginBottom="1dp"/>
+        android:textSize="16sp"/>
 
 </LinearLayout>
