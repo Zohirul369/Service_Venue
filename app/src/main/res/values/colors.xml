@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="Pastel_Mints">#D1FCE0</color>
+    <color name="Pastel_Mints">#F5F5F5</color>
 
     <color name="blue">#03a9f4</color>
     <color name="green">#13C39C</color>
@@ -16,7 +16,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="lavender">#8692f7</color>
     <color name="secondary">#D1FBCA</color>
-    <color name="pastel_mints">#D1FCE0</color>
+    <color name="pastel_mints">#F5F5F5</color>
 
 
 </resources>
