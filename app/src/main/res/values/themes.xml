@@ -23,4 +23,16 @@
     <style name="DialogTheme" parent="Theme.Material3.DayNight.Dialog">
         <item name="colorAccent">@color/black</item>
     </style>
+    
+    <style name="NightModeSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
+    <style name="NotificationSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
 </resources>

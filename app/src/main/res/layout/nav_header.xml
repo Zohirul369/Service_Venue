@@ -19,6 +19,8 @@
         android:layout_height="wrap_content"
         android:text="Service Vennue"
         android:textSize="18sp"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:textColor="@color/black"
         android:layout_marginBottom="16dp"/>
 
     <TextView
@@ -26,6 +28,8 @@
         android:layout_height="wrap_content"
         android:text="Buyer and Seller Connector App"
         android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="@color/black"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:layout_marginBottom="1dp"/>
 
 </LinearLayout>
