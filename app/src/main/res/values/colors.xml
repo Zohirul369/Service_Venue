@@ -17,6 +17,9 @@
     <color name="lavender">#8692f7</color>
     <color name="secondary">#D1FBCA</color>
     <color name="pastel_mints">#F5F5F5</color>
-
+    <color name="night_mode">#6124B1</color>
+    <color name="notification">#E6A326</color>
+    <color name="primary">#1B023B</color>
+    <color name="security">#095F69</color>
 
 </resources>
