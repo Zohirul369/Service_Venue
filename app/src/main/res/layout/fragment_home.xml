@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Pastel_Mints"
+    android:background="@color/white"
     tools:context=".Home_Fragment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -137,7 +137,7 @@
 
                 <ImageButton
                     android:id="@+id/car_rental_img_btn"
-                    android:background="@color/Pastel_Mints"
+                    android:background="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
