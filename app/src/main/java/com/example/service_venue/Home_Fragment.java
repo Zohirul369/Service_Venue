@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.service_venue.service.PaintingService;
+import com.example.service_venue.service.PlumbingService;
 
 
 public class Home_Fragment extends Fragment {
@@ -35,6 +36,18 @@ public class Home_Fragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        ImageButton plumbing_img_btn = view.findViewById(R.id.plumbing_img_btn);
+
+        plumbing_img_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PlumbingService.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
 
