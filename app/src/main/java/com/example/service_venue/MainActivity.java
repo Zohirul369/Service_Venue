@@ -47,41 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-//        profile_dateTxt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                openDialog();
-//            }
-//        });
-//
-//        profileGenderTxt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Toggle the visibility of radio buttons
-//                if (radioGender.getVisibility() == View.VISIBLE) {
-//                    radioGender.setVisibility(View.VISIBLE);
-//                } else {
-//                    radioGender.setVisibility(View.VISIBLE);
-//                }
-//            }
-//        });
-//
-//        // Handle radio button selection
-//        radioGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                if (checkedId == R.id.radioMale) {
-//                    profileGenderTxt.setText("Gender \nMale");
-//
-//                } else if (checkedId == R.id.radioFemale) {
-//                    profileGenderTxt.setText("Gender \nFemale");
-//
-//                }
-//                // Hide the radio buttons
-//                radioGender.setVisibility(View.GONE);
-//            }
-//        });
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -97,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         replaceFragment(new Home_Fragment());
-
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
@@ -126,19 +91,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-//    private void openDialog() {
-//        DatePickerDialog dialog = new DatePickerDialog(this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
-//            @Override
-//            public void onDateSet(DatePicker view, int Year, int Month, int Day) {
-//                // Handle the selected date
-//                String selectedDate = Year + "-" + (Month + 1) + "-" + Day;
-////                profiile_showTxt.setText("Date of Birth: " + selectedDate);
-//                profile_dateTxt.setText(selectedDate); // Set text in the TextView
-//            }
-//        }, 2023, 0, 1);
+
+
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        int itemId = item.getItemId();
+//        if (itemId == R.id.nav_home) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
 //
-//        dialog.show();
+//        } else if (itemId == R.id.nav_settings) {
+//           getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+//
+//           // SettingsFragment settingsFragment = new SettingsFragment();
+//           // replaceFragment(settingsFragment);
+//        } else if (itemId == R.id.nav_share) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
+//        } else if (itemId == R.id.nav_about) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
+//        } else if (itemId == R.id.nav_logout) {
+//            Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+//        }
+//        drawerLayout.closeDrawer(GravityCompat.START);
+//        return true;
 //    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -146,9 +122,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (itemId == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
         } else if (itemId == R.id.nav_settings) {
-           getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
-           // SettingsFragment settingsFragment = new SettingsFragment();
-           // replaceFragment(settingsFragment);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
         } else if (itemId == R.id.nav_share) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
         } else if (itemId == R.id.nav_about) {
@@ -159,6 +133,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
