@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,8 +42,10 @@ public class ProfileFragment extends Fragment {
     RadioGroup radioGender;
     RadioButton radioMale;
     RadioButton radioFemale;
-    private TextView profiile_showTxt;
-    private TextView profile_dateTxt;
+     TextView profiile_showTxt;
+     TextView profile_dateTxt;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,7 +70,18 @@ public class ProfileFragment extends Fragment {
         radioFemale = view.findViewById(R.id.radioFemale);
         profiile_showTxt = view.findViewById(R.id.profiile_showTxt);
         profile_dateTxt = view.findViewById(R.id.profile_dateTxt);
+        Button profile_login = view.findViewById(R.id.profile_login);
 
+
+
+
+        profile_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PersonalProfessionalSignup.class);
+                startActivity(intent);
+            }
+        });
 
 
                 profile_dateTxt.setOnClickListener(new View.OnClickListener() {
