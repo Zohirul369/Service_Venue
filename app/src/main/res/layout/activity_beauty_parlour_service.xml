@@ -24,7 +24,7 @@
                 android:fontFamily="@font/archivo_black"
                 android:padding="10dp"
                 android:text="Beauty Parlour Service"
-                android:textSize="30dp" />
+                android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:text="Rohima"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <RatingBar
                         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$/Hour"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <ImageButton
                         android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:text="Shima"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <RatingBar
 
@@ -133,7 +133,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$/Hour"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <ImageButton
 
@@ -171,7 +171,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:text="Somona"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <RatingBar
 
@@ -195,7 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$/Hour"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <ImageButton
 
@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:text="Bithi"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <RatingBar
 
@@ -257,7 +257,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$/Hour"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <ImageButton
 
@@ -295,7 +295,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:text="Ria"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <RatingBar
 
@@ -319,7 +319,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$/Hour"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <ImageButton
 
@@ -358,7 +358,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:text="Sonia"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <RatingBar
 
@@ -382,7 +382,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$/Hour"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <ImageButton
 
