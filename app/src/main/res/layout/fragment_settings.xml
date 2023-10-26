@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    android:background="@color/pastel_mints"
     android:orientation="vertical"
     tools:context=".SettingsFragment">
 
@@ -64,7 +64,7 @@
                 android:paddingEnd="30dp"
                 android:text="Edit profile"
                 android:textAllCaps="false"
-                android:textColor="@color/primary" />
+                android:textColor="@color/pastel_mints" />
 
             <LinearLayout
                 android:layout_width="match_parent"

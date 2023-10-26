@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,68 +16,45 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/slider"
-                    android:layout_width="322dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
                     android:layout_weight="1"
                     android:src="@drawable/sliderimages" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/search_bar_opt"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/background_solid_white"
+                    android:drawableStart="@drawable/baseline_search_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Search"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/slider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-                    <ImageButton
-                        android:id="@+id/login_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/Pastel_Mints"
-                        android:padding="5dp"
-                        android:src="@drawable/login" />
-
-                    <ImageButton
-                        android:id="@+id/location_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/Pastel_Mints"
-                        android:padding="5dp"
-                        android:src="@drawable/baseline_add_location_24" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <EditText
-                android:id="@+id/search_bar_opt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/background_solid_white"
-                android:drawableStart="@drawable/baseline_search_24"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:hint="Search"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColor="@color/black" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/job_posts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
                 android:padding="5dp"
                 android:text="Job Posts"
                 android:textSize="20dp" />
