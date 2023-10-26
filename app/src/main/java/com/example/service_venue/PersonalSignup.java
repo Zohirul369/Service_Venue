@@ -59,7 +59,7 @@ public class PersonalSignup extends AppCompatActivity {
                     Pass.setError("Password cannot empty");
                 }
                 if(conpass.isEmpty()){
-                    ConfPass.setError("Confrim Password cannot empty");
+                    ConfPass.setError("Confirm Password cannot empty");
                 }
                 if(adds.isEmpty()){
                     Add.setError("Address cannot empty");
@@ -72,7 +72,7 @@ public class PersonalSignup extends AppCompatActivity {
                                 Toast.makeText(PersonalSignup.this,"Signup Seccessful",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(PersonalSignup.this, Login.class));
                             }else {
-                                Toast.makeText(PersonalSignup.this,"Signup Fail",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PersonalSignup.this,"Signup Fail"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
