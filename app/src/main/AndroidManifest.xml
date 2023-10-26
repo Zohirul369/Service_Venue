@@ -12,11 +12,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Service_Venue"
         tools:targetApi="31">
+        <activity
+            android:name=".service.BeautyParlourService"
+            android:exported="false" />
+        <activity
+            android:name=".service.LondiService"
+            android:exported="false" />
+        <activity
+            android:name=".service.CarRentService"
+            android:exported="false" />
+        <activity
+            android:name=".service.CarWashService"
+            android:exported="false" />
+        <activity
+            android:name=".service.CarpenterService"
+            android:exported="false" />
+        <activity
+            android:name=".service.MovingService"
+            android:exported="false" />
+        <activity
+            android:name=".service.ElectricianService"
+            android:exported="false" />
+        <activity
+            android:name=".service.HouseCleaing"
+            android:exported="false" />
+        <activity
+            android:name=".service.PlumbingService"
+            android:exported="false" />
+        <activity
+            android:name=".service.PaintingService"
+            android:exported="false" />
+        <activity
+            android:name=".PaintingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Service_Activity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Splash_Screen"
             android:exported="true">

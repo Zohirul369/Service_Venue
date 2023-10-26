@@ -147,7 +147,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/parler_img_btn"
+                        android:id="@+id/beauty_parler_img_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -155,12 +155,12 @@
                         android:src="@drawable/parler" />
 
                     <ImageButton
-                        android:id="@+id/air_repair_img_btn"
+                        android:id="@+id/house_clean_img_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@color/Pastel_Mints"
-                        android:src="@drawable/air_repair" />
+                        android:src="@drawable/house_clean" />
 
                     <ImageButton
                         android:id="@+id/moving_service_img_btn"
@@ -169,8 +169,14 @@
                         android:layout_weight="1"
                         android:background="@color/Pastel_Mints"
                         android:src="@drawable/moving_service" />
+
                 </LinearLayout>
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical">
 
             </LinearLayout>
 
