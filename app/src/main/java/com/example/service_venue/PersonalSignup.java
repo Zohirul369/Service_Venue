@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +22,7 @@ public class PersonalSignup extends AppCompatActivity {
 
     private EditText Name, Email, Number, Pass, ConfPass, Add;
     private Button PerButton;
+    private TextView signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class PersonalSignup extends AppCompatActivity {
         ConfPass = findViewById(R.id.confirm_password);
         Add = findViewById(R.id.address);
         PerButton = findViewById(R.id.PersonalSignupButton);
+        signin = findViewById(R.id.sign);
 
         PerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +81,13 @@ public class PersonalSignup extends AppCompatActivity {
                     });
                 }
 
+            }
+        });
+
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PersonalSignup.this, Login.class));
             }
         });
 
