@@ -24,10 +24,7 @@
         <activity
             android:name=".service.CarWashService"
             android:exported="false" />
-        <activity
-            android:name=".service.CarpenterService"
-            android:exported="false" />
-        <activity
+
             android:name=".service.MovingService"
             android:exported="false" />
         <activity
@@ -42,15 +39,7 @@
         <activity
             android:name=".service.PaintingService"
             android:exported="false" />
-        <activity
-            android:name=".PaintingService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Service_Activity"
             android:exported="false" />
