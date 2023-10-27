@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
@@ -71,6 +72,9 @@ public class ProfileFragment extends Fragment {
         profiile_showTxt = view.findViewById(R.id.profiile_showTxt);
         profile_dateTxt = view.findViewById(R.id.profile_dateTxt);
         Button profile_login = view.findViewById(R.id.profile_login);
+
+        //TextView profile_location_txt = view.findViewById(R.id.profile_location_txt);
+      //  ImageView profile_location_img = view.findViewById(R.id.profile_location_img);
 
 
 
