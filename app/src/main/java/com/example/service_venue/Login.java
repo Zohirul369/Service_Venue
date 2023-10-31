@@ -57,6 +57,9 @@ public class Login extends AppCompatActivity {
                              //   fragmentTransaction.replace(R.id.home,fragment).commit();
                                // startActivity(new Intent(Login.this, Home_Fragment.class));
                                //finish();
+
+
+                                
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override

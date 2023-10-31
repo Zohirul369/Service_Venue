@@ -5,7 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Pastel_Mints"
+    android:orientation="vertical"
     tools:context=".Service_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="14dp"
+            android:src="@drawable/back" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,386 +28,121 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/service_name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/archivo_black"
-                android:padding="10dp"
-                android:text="Moving Service"
-                android:textSize="25dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white10_20"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/profile_circle"
-                    android:layout_margin="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Karim"
-                        android:textSize="20dp" />
-
-                    <RatingBar
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:verticalScrollbarPosition="defaultPosition" />
-                </LinearLayout>
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
 
                     <TextView
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="15dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30sp"
+                        android:text="Home shifting"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
-                    <ImageButton
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
+                        android:src="@drawable/right_arrow"
+                        android:layout_toRightOf="@+id/painting_txt_extra"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentEnd="true"/>
+
+
+                </RelativeLayout>
+
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white10_20"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-                <ImageView
 
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/profile_circle"
-                    android:layout_margin="5dp"/>
 
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Rohim"
-                        android:textSize="20dp" />
-
-                    <RatingBar
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:verticalScrollbarPosition="defaultPosition" />
-                </LinearLayout>
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
                     <TextView
-
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="15dp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30sp"
+                        android:text="Office shifting"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
-                    <ImageButton
-
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_toRightOf="@+id/painting_txt_extra"
                         android:layout_marginTop="10dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white10_20"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-                <ImageView
 
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/profile_circle"
-                    android:layout_margin="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Somon"
-                        android:textSize="20dp" />
-
-                    <RatingBar
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:verticalScrollbarPosition="defaultPosition" />
-                </LinearLayout>
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
                     <TextView
-
-                        android:layout_marginTop="10dp"
+                        android:id="@+id/painting_txt_extra"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="15dp" />
-
-                    <ImageButton
-
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30sp"
+                        android:text="Equipment shifting"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_toRightOf="@+id/painting_txt_extra"
                         android:layout_marginTop="10dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/profile_circle"
-                    android:layout_margin="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Karim"
-                        android:textSize="20dp" />
-
-                    <RatingBar
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:verticalScrollbarPosition="defaultPosition" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <TextView
-
-                        android:layout_marginTop="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="15dp" />
-
-                    <ImageButton
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/profile_circle"
-                    android:layout_margin="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Karim"
-                        android:textSize="20dp" />
-
-                    <RatingBar
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:verticalScrollbarPosition="defaultPosition" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <TextView
-
-                        android:layout_marginTop="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="15dp" />
-
-                    <ImageButton
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/profile_circle"
-                    android:layout_margin="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Kabir"
-                        android:textSize="20dp" />
-
-                    <RatingBar
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:verticalScrollbarPosition="defaultPosition" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-
-                    <TextView
-
-                        android:layout_marginTop="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$/Hour"
-                        android:textSize="15dp" />
-
-                    <ImageButton
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/Pastel_Mints"
-                        android:src="@drawable/location" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-
         </LinearLayout>
 
     </ScrollView>

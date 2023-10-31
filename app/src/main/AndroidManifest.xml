@@ -32,6 +32,8 @@
         <activity
             android:name=".service.CarWashService"
             android:exported="false" />
+        <activity android:name=".service.MovingService"
+            android:exported="false"/>
 
         <activity
             android:name=".service.ElectricianService"
