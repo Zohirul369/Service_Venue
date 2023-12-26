@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity {
                                // Fragment fragment = new Home_Fragment();
                               //  FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                              //   fragmentTransaction.replace(R.id.home,fragment).commit();
-                               // startActivity(new Intent(Login.this, Home_Fragment.class));
+                               // startActivity(new Intent(Login.this, Home_Fragment.cl));
                                //finish();
 
 

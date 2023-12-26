@@ -27,12 +27,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity  {
 
-    NavigationView navigationView;
-    Toolbar toolbar;
+//    NavigationView navigationView;
+//    Toolbar toolbar;
     BottomNavigationView bottomNavigationView;
-    private DrawerLayout drawerLayout;
+//    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,26 +44,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        navigationView= findViewById(R.id.nav_view);
+       // navigationView= findViewById(R.id.nav_view);
 
 
       //  bottomNavigationView.bringToFront();
 
 
 
-        drawerLayout = findViewById(R.id.drawer_layout);
+      /*  drawerLayout = findViewById(R.id.drawer_layout);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        toggle.syncState();*/
 
-        if (savedInstanceState == null) {
+     /*   if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
-
+*/
         replaceFragment(new Home_Fragment());
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -72,13 +72,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (itemId == R.id.bm_home) {
                 replaceFragment(new Home_Fragment());
             } else if (itemId == R.id.bm_top_review) {
-                replaceFragment(new ReviewFragment());
+                replaceFragment(new InboxFragment());
             } else if (itemId == R.id.bm_order) {
                 replaceFragment(new OrderFragment());
             } else if (itemId == R.id.bm_help) {
                 replaceFragment(new HelpFragment());
-            } else if (itemId == R.id.bm_profile) {
-                replaceFragment(new ProfileFragment());
+            } else if (itemId == R.id.bm_settings) {
+                replaceFragment(new SettingsFragment());
             }
 
             return true;
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-    @Override
+/*    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.nav_home) {
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
-    }
+    }*/
 
 
 
@@ -126,13 +126,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentTransaction.commit();
     }
 
-    @Override
-    public void onBackPressed() {
-if (drawerLayout.isDrawerOpen(GravityCompat.START)){
-    drawerLayout.closeDrawer(GravityCompat.START);
-}else {
-    super.onBackPressed();
-}
 
-    }
 }

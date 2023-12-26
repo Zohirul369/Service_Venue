@@ -22,4 +22,6 @@
     <color name="primary">#1B023B</color>
     <color name="security">#095F69</color>
 
+    <color name="tab_selected">#BAFFC9</color>
+
 </resources>

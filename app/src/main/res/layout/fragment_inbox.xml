@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".OrderFragment">
+    tools:context=".InboxFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,23 +23,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
-            android:text="My Orders"
+            android:text="Inbox"
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold" />
 
 
     </LinearLayout>
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/order_table"
-        android:layout_width="230dp"
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/inbox_table"
+        android:layout_width="230dp"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="40dp"
         android:background="@color/white"
-        app:tabIndicatorColor="#BAFFC9"
+        app:tabIndicatorColor="@color/tab_selected"
         app:tabIndicatorHeight="3dp"
-        app:tabSelectedTextColor="#BAFFC9"
+        app:tabSelectedTextColor="@color/tab_selected"
         app:tabTextColor="#383c4a"
         >
 
@@ -47,7 +47,7 @@
             android:id="@+id/order_table_ongoing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ongoing">
+            android:text="Chat">
 
         </com.google.android.material.tabs.TabItem>
 
@@ -55,7 +55,7 @@
             android:id="@+id/order_table_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="History">
+            android:text="Notification">
 
         </com.google.android.material.tabs.TabItem>
 
@@ -68,6 +68,11 @@
         android:layout_marginTop="0dp">
 
 
+
     </androidx.viewpager.widget.ViewPager>
+
+
+
+
 
 </RelativeLayout>
