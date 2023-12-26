@@ -7,19 +7,19 @@
         android:icon="@drawable/home"/>
     <item
         android:id="@+id/bm_top_review"
-        android:title="Inbox"
+        android:title="Reviews"
         android:icon="@drawable/review"/>
     <item
         android:id="@+id/bm_order"
-        android:title="Orders"
+        android:title="Order"
         android:icon="@drawable/order"/>
     <item
         android:id="@+id/bm_help"
         android:title="Help"
         android:icon="@drawable/help"/>
     <item
-        android:id="@+id/bm_settings"
-        android:title="More"
+        android:id="@+id/bio_prof"
+        android:title="Bio"
         android:icon="@drawable/setting"/>
 
 </menu>
