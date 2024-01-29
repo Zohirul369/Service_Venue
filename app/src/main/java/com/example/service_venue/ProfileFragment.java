@@ -71,21 +71,7 @@ public class ProfileFragment extends Fragment {
         radioFemale = view.findViewById(R.id.radioFemale);
         profiile_showTxt = view.findViewById(R.id.profiile_showTxt);
         profile_dateTxt = view.findViewById(R.id.profile_dateTxt);
-        Button profile_login = view.findViewById(R.id.profile_login);
 
-        //TextView profile_location_txt = view.findViewById(R.id.profile_location_txt);
-      //  ImageView profile_location_img = view.findViewById(R.id.profile_location_img);
-
-
-
-
-        profile_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PersonalProfessionalSignup.class);
-                startActivity(intent);
-            }
-        });
 
 
                 profile_dateTxt.setOnClickListener(new View.OnClickListener() {

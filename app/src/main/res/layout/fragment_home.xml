@@ -8,20 +8,30 @@
     android:orientation="vertical"
     tools:context=".Home_Fragment">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:id="@+id/profile_login"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/login_icon">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
                 android:layout_weight="1">
+
 
                 <ImageView
                     android:id="@+id/slider"
@@ -51,18 +61,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/job_posts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:padding="5dp"
-                android:text="Job Posts"
-                android:textSize="20dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp" />
 
             <TextView
                 android:id="@+id/service_catagory"
@@ -174,14 +172,10 @@
                 </LinearLayout>
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="vertical">
 
-            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </FrameLayout>
