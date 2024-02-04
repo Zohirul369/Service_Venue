@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "222392382784",
-    "project_id": "service-venue-4cb21",
-    "storage_bucket": "service-venue-4cb21.appspot.com"
+    "project_number": "611762916655",
+    "project_id": "service-venue-database",
+    "storage_bucket": "service-venue-database.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:222392382784:android:e304db7cd72bca8e5676a5",
+        "mobilesdk_app_id": "1:611762916655:android:83379e4b7851bb97fc25da",
         "android_client_info": {
           "package_name": "com.example.service_venue"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCPkGyEGpPqshxPW4BewNejEZnuNg59YY8"
+          "current_key": "AIzaSyAycJEgQ_bdqpi0-_PyrYDdtEh2nRvdgM0"
         }
       ],
       "services": {
