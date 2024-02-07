@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="6dp"
     android:elevation="6dp"
     app:cardUseCompatPadding="true"
@@ -18,56 +19,59 @@
             android:layout_height="80dp"
             android:src="@mipmap/ic_launcher"
             android:layout_centerVertical="true"
-            android:id="@+id/p_imageview"
+            android:id="@+id/v_imageview"
             app:civ_border_width="3dp"
             app:civ_border_color="@color/blue1"/>
 
         <TextView
-            android:id="@+id/c_name"
-            android:layout_width="120dp"
+            android:id="@+id/vname"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
-            android:layout_toRightOf="@id/p_imageview"
+            android:layout_toRightOf="@id/v_imageview"
             android:text="name"
             android:textColor="@color/blue"
             android:textSize="20dp"
             android:textStyle="bold" />
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/service"
-            android:text="Service"
+            android:id="@+id/rate"
+            android:text="BDT 500/Hour"
             android:layout_marginTop="10dp"
             android:textSize="15dp"
             android:textColor="@color/black"
-            android:layout_toRightOf="@id/p_imageview"
-            android:layout_below="@id/c_name"
+            android:layout_toRightOf="@id/v_imageview"
+            android:layout_below="@id/vname"
             android:layout_marginLeft="10dp"/>
 
         <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
+            android:id="@+id/rating"
+            android:layout_width="67dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="46dp"
+
             android:layout_marginTop="17dp"
-            android:layout_toRightOf="@id/c_name"
-            android:text="04/02/2024"
+            android:layout_marginEnd="1dp"
+            android:layout_toRightOf="@id/vname"
+            android:text="2Star"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
-        <Button
-            android:id="@+id/price"
+        <TextView
+            android:id="@+id/distance"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_below="@+id/c_name"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vname"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="5dp"
-            android:layout_toRightOf="@id/service"
-            android:backgroundTint="@color/white"
-            android:text="View Order"
-            android:textColor="@color/purple"
+            android:layout_marginEnd="1dp"
+            android:text="2km away"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
     </RelativeLayout>
