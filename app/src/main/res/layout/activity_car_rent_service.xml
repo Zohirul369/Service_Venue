@@ -10,10 +10,12 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_car_rent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Car Rent Service"
+        android:textSize="30dp"
+        android:textColor="@color/purple"
         android:gravity="center"/>
 
     <ScrollView
