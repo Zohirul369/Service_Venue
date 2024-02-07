@@ -1,30 +1,13 @@
 package com.example.service_venue;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.DatePickerDialog;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-
-
-import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import com.google.android.material.navigation.NavigationView;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -69,12 +52,12 @@ public class MainActivity extends AppCompatActivity  {
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             int itemId = item.getItemId();
-            if (itemId == R.id.bm_home) {
-                replaceFragment(new Home_Fragment());
+            if (itemId == R.id.bm_request) {
+                replaceFragment(new RequestFragment());
             } else if (itemId == R.id.bm_top_review) {
                 replaceFragment(new InboxFragment());
-            } else if (itemId == R.id.bm_order) {
-                replaceFragment(new OrderFragment());
+            } else if (itemId == R.id.bm_home) {
+                replaceFragment(new Home_Fragment());
             } else if (itemId == R.id.bm_help) {
                 replaceFragment(new HelpFragment());
             } else if (itemId == R.id.bm_settings) {

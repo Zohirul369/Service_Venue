@@ -1,12 +1,12 @@
 package com.example.service_venue.service;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.service_venue.R;
 import com.example.service_venue.ViewModel;
@@ -18,7 +18,6 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CarRentService extends AppCompatActivity {
 
     RecyclerView recyclerView;
-
     CarRentAdapter carRentAdapter;
 
     @Override

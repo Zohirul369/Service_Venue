@@ -54,7 +54,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
     @NonNull
     @Override
     public CarRentAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_item,parent,false);
         return new CarRentAdapter.myViewHolder(view);
     }
     class myViewHolder extends RecyclerView.ViewHolder{
