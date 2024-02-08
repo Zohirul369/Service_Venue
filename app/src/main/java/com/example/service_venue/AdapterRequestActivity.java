@@ -17,12 +17,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AdapterRequestActivity extends FirebaseRecyclerAdapter<ViewModel, AdapterRequestActivity.myViewHolder> {
-    /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
+
     private Button btn_edit;
     public AdapterRequestActivity(@NonNull FirebaseRecyclerOptions<ViewModel> options) {
         super(options);

@@ -7,7 +7,7 @@
         android:icon="@drawable/request"/>
     <item
         android:id="@+id/bm_top_review"
-        android:title="Inbox"
+        android:title="Notification"
         android:icon="@drawable/review"/>
     <item
         android:id="@+id/bm_home"
@@ -15,11 +15,11 @@
         android:icon="@drawable/home"/>
     <item
         android:id="@+id/bm_help"
-        android:title="Help"
+        android:title="Chats"
         android:icon="@drawable/help"/>
     <item
         android:id="@+id/bm_settings"
-        android:title="More"
+        android:title="Account"
         android:icon="@drawable/setting"/>
 
 </menu>
