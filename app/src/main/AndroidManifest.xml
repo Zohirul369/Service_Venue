@@ -17,12 +17,6 @@
         android:theme="@style/Theme.Service_Venue"
         tools:targetApi="31">
         <activity
-            android:name=".view_order.ViewOrderSecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view_order.ViewOrderFirstActivity"
-            android:exported="false" />
-        <activity
             android:name=".VendorProfile"
             android:exported="false" />
         <activity
