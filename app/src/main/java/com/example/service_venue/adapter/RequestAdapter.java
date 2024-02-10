@@ -1,4 +1,4 @@
-package com.example.service_venue;
+package com.example.service_venue.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.service_venue.R;
+import com.example.service_venue.ViewModel;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
@@ -20,9 +22,9 @@ import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class AdapterRequestActivity extends FirebaseRecyclerAdapter<ViewModel, AdapterRequestActivity.myViewHolder> {
-    private Button btn_edit;
-    public AdapterRequestActivity(@NonNull FirebaseRecyclerOptions<ViewModel> options) {
+public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAdapter.myViewHolder> {
+
+    public RequestAdapter(@NonNull FirebaseRecyclerOptions<ViewModel> options) {
         super(options);
     }
 
@@ -59,7 +61,7 @@ public class AdapterRequestActivity extends FirebaseRecyclerAdapter<ViewModel, A
 
     @NonNull
     @Override
-    public AdapterRequestActivity.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RequestAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item,parent,false);
         return new myViewHolder(view);
     }

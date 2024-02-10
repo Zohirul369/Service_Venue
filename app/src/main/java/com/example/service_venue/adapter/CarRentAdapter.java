@@ -49,6 +49,18 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 .circleCrop()
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
+        holder.view_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
+                        .setContentHolder(new ViewHolder(R.layout.activity_vendor_profile))
+                        .setExpanded(true,1400)
+                        .create();
+
+                dialogPlus.show();
+
+            }
+        });
 
     }
 
@@ -61,6 +73,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
     class myViewHolder extends RecyclerView.ViewHolder{
         CircleImageView img;
         TextView vname, rating, distance, rate;
+        Button view_profile;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -70,6 +83,8 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             rating = (TextView)itemView.findViewById(R.id.rating);
             distance = (TextView)itemView.findViewById(R.id.distance);
             rate = (TextView)itemView.findViewById(R.id.rate);
+
+            view_profile = (Button) itemView.findViewById(R.id.view_profile);
 
         }
     }

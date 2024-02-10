@@ -9,15 +9,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.service_venue.adapter.RequestAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class UpComingFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private AdapterRequestActivity adapterRequestActivity;
-    private FloatingActionButton floatingActionButton;
+    private RequestAdapter requestAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,8 +32,8 @@ public class UpComingFragment extends Fragment {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("serviceVenue").child("request"), ViewModel.class)
                         .build();
 
-        adapterRequestActivity = new AdapterRequestActivity(options);
-        recyclerView.setAdapter(adapterRequestActivity);
+        requestAdapter = new RequestAdapter(options);
+        recyclerView.setAdapter(requestAdapter);
 
         return view;
     }
@@ -42,12 +41,12 @@ public class UpComingFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        adapterRequestActivity.startListening();
+        requestAdapter.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        adapterRequestActivity.stopListening();
+        requestAdapter.stopListening();
     }
 }
