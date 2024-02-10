@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".order.OrderFirstPageActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="6dp"
+        android:background="@color/white"
         android:elevation="6dp"
-        app:cardUseCompatPadding="true"
-        android:background="@color/white">
+        app:cardCornerRadius="6dp"
+        app:cardUseCompatPadding="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -52,8 +54,8 @@
                 android:id="@+id/text_job_task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_below="@id/vname"
+                android:layout_marginStart="10dp"
                 android:layout_toRightOf="@id/p_imageview"
                 android:text="Job Task" />
 
@@ -62,8 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_job_task"
-                android:layout_toRightOf="@id/p_imageview"
                 android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/p_imageview"
                 android:text="Tab Wash"
                 android:textColor="@color/black"
                 android:textSize="15dp"
@@ -83,9 +85,9 @@
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/p_imageview"
                 android:layout_below="@id/text_date"
                 android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/p_imageview"
                 android:text="04/02/2024"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -105,8 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_address"
-                android:layout_toRightOf="@id/p_imageview"
                 android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/p_imageview"
                 android:text="Dhaka,Gazipur"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -125,9 +127,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/red1"
             android:text="Cancel Job"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/red1"/>
+            android:textColor="@color/black" />
 
 
         <Button
@@ -135,9 +137,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Accept Job"
             android:backgroundTint="@color/Green"
-            android:textColor="@color/black"/>
+            android:text="Accept Job"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

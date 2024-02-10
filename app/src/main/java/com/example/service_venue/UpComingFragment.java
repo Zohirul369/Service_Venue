@@ -13,36 +13,30 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
-
 public class UpComingFragment extends Fragment {
 
+    private RecyclerView recyclerView;
+    private AdapterRequestActivity adapterRequestActivity;
+    private FloatingActionButton floatingActionButton;
 
-    RecyclerView recyclerView;
-    AdapterRequestActivity adapterRequestActivity;
-
-    FloatingActionButton floatingActionButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_upcoming, container, false);
 
-
-
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<ViewModel> options =
                 new FirebaseRecyclerOptions.Builder<ViewModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("request"),ViewModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("serviceVenue").child("request"), ViewModel.class)
                         .build();
 
         adapterRequestActivity = new AdapterRequestActivity(options);
         recyclerView.setAdapter(adapterRequestActivity);
 
-
         return view;
-
     }
 
     @Override
