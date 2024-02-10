@@ -28,7 +28,7 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
             android:layout_toRightOf="@id/v_imageview"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/rate"
             android:text="BDT 500/Hour"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             android:textSize="15dp"
             android:textColor="@color/black"
             android:layout_toRightOf="@id/v_imageview"
@@ -52,12 +52,10 @@
             android:id="@+id/rating"
             android:layout_width="67dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="46dp"
-
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="1dp"
-            android:layout_toRightOf="@id/vname"
+            android:layout_toRightOf="@id/v_imageview"
+            android:layout_below="@id/rate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
             android:text="2Star"
             android:textColor="@color/black"
             android:textSize="15dp" />
@@ -66,13 +64,25 @@
             android:id="@+id/distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/vname"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="1dp"
+            android:layout_marginTop="10dp"
             android:text="2km away"
             android:textColor="@color/black"
             android:textSize="15dp" />
+        <Button
+            android:id="@+id/view_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/distance"
+            android:text="View Profile"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/purple"
+            android:padding="1dp"
+            android:textSize="10dp" />
 
     </RelativeLayout>
 

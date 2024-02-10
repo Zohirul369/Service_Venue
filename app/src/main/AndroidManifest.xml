@@ -20,6 +20,12 @@
             android:name=".order.OrderFirstPageActivity"
             android:exported="false" />
         <activity
+            android:name=".viewOrder.ViewOrderSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewOrder.ViewOrderFirstActivity"
+            android:exported="false" />
+        <activity
             android:name=".VendorProfile"
             android:exported="false" />
         <activity
