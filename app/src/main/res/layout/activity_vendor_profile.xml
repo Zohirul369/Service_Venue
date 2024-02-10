@@ -23,6 +23,7 @@
             android:src="@drawable/back_btn" />
 
         <TextView
+            android:id="@+id/vfname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
@@ -45,26 +46,30 @@
             android:background="@color/white"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/vendor_profile_image"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/profile_circle" />
+                android:src="@mipmap/ic_launcher"
+                android:layout_centerVertical="true"
+                android:id="@+id/v_imageview"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/blue1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/vname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Alex John"
+                    android:layout_marginTop="20dp"
+                    android:text="Alex Fedriq"
                     android:textSize="20dp"
                     android:textStyle="bold" />
                 <TextView
+                    android:id="@+id/worktitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -82,12 +87,12 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/vendor_profile_price"
+                            android:id="@+id/rate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
-                            android:text="$ 250"
+                            android:text="250"
                             android:textColor="@color/grey"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -95,7 +100,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="per hour"
+                            android:text="BDT/hour"
                             android:textSize="10dp"
                             android:textColor="@color/grey"
                             android:textStyle="normal" />
@@ -108,12 +113,12 @@
                         android:orientation="vertical"
                         android:layout_marginLeft="20dp">
                         <TextView
-                            android:id="@+id/vendor_profile_distance"
+                            android:id="@+id/distance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
-                            android:text="2.3 km"
+                            android:text="2.3"
                             android:textColor="@color/grey"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -121,7 +126,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="Plumber"
+                            android:text="km Away"
                             android:textSize="10dp"
                             android:textColor="@color/grey"
                             android:textStyle="normal" />
@@ -134,23 +139,24 @@
                         android:layout_marginLeft="20dp"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/vendor_profile_rating"
+                            android:id="@+id/rating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
                             android:layout_marginTop="20dp"
-                            android:text="3.5 ⭐"
+                            android:text="3.5"
                             android:textSize="17dp"
                             android:textStyle="bold" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="Ranked by"
+                            android:text="⭐"
                             android:textSize="10dp"
                             android:textColor="@color/grey"
-                            android:textStyle="normal" />
+                            android:textStyle="bold"
+                            />
 
                     </LinearLayout>
 
