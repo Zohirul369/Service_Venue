@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Service_Activity"
-    android:background="@color/white">
+    tools:context=".Service_Activity">
 
 
     <TextView
         android:id="@+id/text_car_rent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Car Rent Service"
-        android:textSize="30dp"
         android:textColor="@color/purple"
-        android:gravity="center"/>
+        android:textSize="30dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
