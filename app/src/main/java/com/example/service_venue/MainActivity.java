@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity  {
                 replaceFragment(new Home_Fragment());
             } else if (itemId == R.id.bm_help) {
                 replaceFragment(new HelpFragment());
-            } else if (itemId == R.id.bm_settings) {
-                replaceFragment(new SettingsFragment());
+            } else if (itemId == R.id.bm_account) {
+                replaceFragment(new ProfileFragment());
             }
 
             return true;
