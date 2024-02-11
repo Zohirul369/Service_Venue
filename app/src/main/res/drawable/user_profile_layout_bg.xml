@@ -1,0 +1,11 @@
+<!-- rectangle_white_grey_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- White fill color -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Grey border color -->
+    <stroke
+        android:width="2dp"
+        android:color="#F0F0F0" /> <!-- Adjust the border width and color as needed -->
+</shape>
