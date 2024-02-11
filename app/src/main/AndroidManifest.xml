@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Service_Venue"
         tools:targetApi="31">
         <activity
+            android:name=".UserSignup"
+            android:exported="false" />
+        <activity
             android:name=".order.OrderFirstPageActivity"
             android:exported="false" />
         <activity
