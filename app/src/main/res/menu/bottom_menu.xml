@@ -18,7 +18,7 @@
         android:title="Chats"
         android:icon="@drawable/help"/>
     <item
-        android:id="@+id/bm_settings"
+        android:id="@+id/bm_account"
         android:title="Account"
         android:icon="@drawable/setting"/>
 
