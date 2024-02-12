@@ -114,7 +114,7 @@
                 android:layout_height="70dp"
                 android:layout_below="@id/vendor_profile_details"
                 android:background="@drawable/user_profile_layout_bg"
-                android:orientation="vertical"
+                android:orientation="horizontal"
 
                 >
 
