@@ -38,6 +38,7 @@ android {
 
 dependencies {
 
+    var fragment_version = "1.6.1"
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -46,9 +47,6 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.database)
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.messaging)
-    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -69,9 +67,11 @@ dependencies {
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.orhanobut:dialogplus:1.11@aar")
     implementation("com.squareup.picasso:picasso:2.5.2")
+    implementation("androidx.fragment:fragment:$fragment_version")
     implementation("com.google.firebase:firebase-messaging:23.4.1")
     implementation("com.google.gms:google-services:4.4.1")
 
 }
 apply(plugin = "com.google.gms.google-services")
 apply(plugin = "com.android.application")
+

@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:text="Plumber"
-                    android:textSize="10dp"
+                    android:textSize="15dp"
                     android:textColor="@color/grey"
                     android:textStyle="normal" />
                 <LinearLayout
@@ -101,7 +101,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:text="BDT/hour"
-                            android:textSize="10dp"
+                            android:textSize="13dp"
                             android:textColor="@color/grey"
                             android:textStyle="normal" />
 
@@ -122,13 +122,14 @@
                             android:textColor="@color/grey"
                             android:textSize="17dp"
                             android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:text="km Away"
-                            android:textSize="10dp"
                             android:textColor="@color/grey"
+                            android:textSize="13dp"
                             android:textStyle="normal" />
 
                     </LinearLayout>
@@ -153,7 +154,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:text="⭐"
-                            android:textSize="10dp"
+                            android:textSize="13dp"
                             android:textColor="@color/grey"
                             android:textStyle="bold"
                             />
@@ -283,12 +284,12 @@
         </com.google.android.material.tabs.TabLayout>
 
         <Button
-            android:id="@+id/vendor_profile_bookNow"
+            android:id="@+id/btn_book_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:background="@color/purple_500"
+            android:backgroundTint="@color/purple"
             android:text="Book now"
             android:textSize="22sp"
             android:textColor="@android:color/white"/>

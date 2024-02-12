@@ -79,6 +79,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 vfname.setText(model.getVname());
 
 
+                Button btn_book_now = view.findViewById(R.id.btn_book_now);
                 Glide.with(view.getContext())
                         .load(model.getVimage())
                         .placeholder(R.drawable.logo) // Placeholder image for Glide
@@ -88,6 +89,16 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
 
                 dialogPlus.show();
+
+                btn_book_now.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
+                                .setContentHolder(new ViewHolder(R.layout.activity_confirm_order))
+                                .setExpanded(true, 1400)
+                                .create();
+                    }
+                });
 
 
             }
