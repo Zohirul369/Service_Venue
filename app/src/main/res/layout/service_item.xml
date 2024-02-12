@@ -108,7 +108,7 @@
             android:textColor="@color/black"
             android:textSize="15dp" />
         <Button
-            android:id="@+id/view_profile"
+            android:id="@+id/btn_view_profile"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_alignParentEnd="true"
@@ -126,7 +126,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="1dp"
             android:layout_marginTop="3dp"
-            android:layout_below="@+id/view_profile"
+            android:layout_below="@+id/btn_view_profile"
             android:text="Book Now"
             android:textColor="@color/black"
             android:backgroundTint="@color/purple"

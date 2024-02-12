@@ -30,15 +30,15 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ViewModel model) {
-        holder.cname.setText(model.getCname());
-        holder.worktile.setText(model.getWorktitle());
-        holder.date.setText(model.getDate());
+        holder.cName.setText(model.getcName());
+        holder.cWorktile.setText(model.getcWorkTitle());
+        holder.cDate.setText(model.getcDate());
 
 
 
 
         Glide.with(holder.img.getContext())
-                .load(model.getCimage())
+                .load(model.getcImage())
                 .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
                 .circleCrop()
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
@@ -67,7 +67,7 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
     }
     class myViewHolder extends RecyclerView.ViewHolder{
         CircleImageView img;
-        TextView cname, worktile, date;
+        TextView cName, cWorktile, cDate;
 
         Button view_order;
 
@@ -76,9 +76,9 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
             super(itemView);
 
             img = (CircleImageView)itemView.findViewById(R.id.c_imageview);
-            cname = (TextView)itemView.findViewById(R.id.cname);
-            worktile = (TextView)itemView.findViewById(R.id.worktitle);
-            date = (TextView)itemView.findViewById(R.id.date);
+            cName = (TextView)itemView.findViewById(R.id.cname);
+            cWorktile = (TextView)itemView.findViewById(R.id.worktitle);
+            cDate = (TextView)itemView.findViewById(R.id.date);
 
             view_order = (Button) itemView.findViewById(R.id.view_order);
 

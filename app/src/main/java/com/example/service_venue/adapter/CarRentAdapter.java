@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,20 +39,22 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
     @Override
     protected void onBindViewHolder(@NonNull CarRentAdapter.myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ViewModel model) {
-        holder.vname.setText(model.getVname());
-        holder.rate.setText(model.getRate());
-        holder.rating.setText(model.getRating());
-        holder.distance.setText(model.getDistance());
+        holder.vname.setText(model.getvName());
+        holder.rate.setText(model.getvRate());
+        holder.rating.setText(model.getvRating());
+        holder.distance.setText(model.getvDistance());
+
+
 
 
         Glide.with(holder.img.getContext())
-                .load(model.getVimage())
+                .load(model.getvImage())
                 .placeholder(R.drawable.logo)
                 .circleCrop()
                 .error(R.drawable.logo)
                 .into(holder.img);
 
-        holder.view_profile.setOnClickListener(new View.OnClickListener() {
+        holder.btn_view_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
@@ -71,17 +74,18 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
                 CircleImageView vimage = view.findViewById(R.id.v_imageview); // assuming the ImageView ID is 'image_in_dialog'
 
-                vname.setText(model.getVname());
-                rate.setText(model.getRate());
-                distance.setText(model.getDistance());
-                rating.setText(model.getRating());
-                worktitle.setText(model.getWorktitle());
-                vfname.setText(model.getVname());
+                vname.setText(model.getvName());
+                rate.setText(model.getvRate());
+                distance.setText(model.getvDistance());
+                rating.setText(model.getvRating());
+                worktitle.setText(model.getServiceName());
+                vfname.setText(model.getvName());
 
 
                 Button btn_book_now = view.findViewById(R.id.btn_book_now);
+
                 Glide.with(view.getContext())
-                        .load(model.getVimage())
+                        .load(model.getvImage())
                         .placeholder(R.drawable.logo) // Placeholder image for Glide
                         .error(R.drawable.logo) // Error image for Glide
                         .circleCrop()
@@ -90,19 +94,11 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
                 dialogPlus.show();
 
-                btn_book_now.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
-                                .setContentHolder(new ViewHolder(R.layout.activity_confirm_order))
-                                .setExpanded(true, 1400)
-                                .create();
-                    }
-                });
-
 
             }
         });
+
+
 
 
     }
@@ -117,8 +113,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
     static class myViewHolder extends RecyclerView.ViewHolder {
         CircleImageView img;
         TextView vname, rating, distance, rate, worktitle, vfname;
-        Button view_profile,btn_book_now;
-
+        Button btn_view_profile,btn_book_now;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -129,8 +124,10 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             rate = itemView.findViewById(R.id.rate);
             worktitle = itemView.findViewById(R.id.worktitle);
             vfname = itemView.findViewById(R.id.vfname);
+            vfname = itemView.findViewById(R.id.vfname);
+            vfname = itemView.findViewById(R.id.vfname);
 
-            view_profile = (Button) itemView.findViewById(R.id.view_profile);
+            btn_view_profile = (Button) itemView.findViewById(R.id.btn_view_profile);
             btn_book_now = (Button) itemView.findViewById(R.id.btn_book_now);
         }
     }

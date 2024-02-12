@@ -1,155 +1,263 @@
 package com.example.service_venue;
 
 public class ViewModel {
-    String vname,price,rating,rate,sname,vimage,distance,vaddress,cphone,vphone,cname,caddress,cimage,worktitle,cemail,date;
+    String about,vDocuments,vEmail,vMgs,rateType,vRating,serviceDec,serviceName,vAddress,vDistance,vImage,vName,vRate,vAge,vDate,cImage,cName, cEmail,cPhone,cAddress,cRating,cDocument,cDate,cWorkTitle,cMgs,cAddressTitle,cAppointmentNote,cRate;
 
     ViewModel(){
 
     }
-    public ViewModel(String vname, String price, String rating, String rate, String sname, String vimage, String distance, String vaddress, String cphone, String vphone, String cname, String caddress, String cimage, String worktitle, String cemail, String date) {
-        this.vname = vname;
-        this.price = price;
-        this.rating = rating;
-        this.rate = rate;
-        this.sname = sname;
-        this.vimage = vimage;
-        this.distance = distance;
-        this.vaddress = vaddress;
-        this.cphone = cphone;
-        this.vphone = vphone;
-        this.cname = cname;
-        this.caddress = caddress;
-        this.cimage = cimage;
-        this.worktitle = worktitle;
-        this.cemail = cemail;
-        this.date = date;
+    public ViewModel(String about, String vDocuments, String vEmail, String vMgs, String rateType, String vRating, String serviceDec, String serviceName, String vAddress, String vDistance, String vImage, String vName, String vRate, String vAge, String vDate, String cImage, String cName, String cEmail, String cPhone, String cAddress, String cRating, String cDocument, String cDate, String cWorkTitle, String cMgs, String cAddressTitle, String cAppointmentNote, String cRate) {
+        this.about = about;
+        this.vDocuments = vDocuments;
+        this.vEmail = vEmail;
+        this.vMgs = vMgs;
+        this.rateType = rateType;
+        this.vRating = vRating;
+        this.serviceDec = serviceDec;
+        this.serviceName = serviceName;
+        this.vAddress = vAddress;
+        this.vDistance = vDistance;
+        this.vImage = vImage;
+        this.vName = vName;
+        this.vRate = vRate;
+        this.vAge = vAge;
+        this.vDate = vDate;
+        this.cImage = cImage;
+        this.cName = cName;
+        this.cEmail = cEmail;
+        this.cPhone = cPhone;
+        this.cAddress = cAddress;
+        this.cRating = cRating;
+        this.cDocument = cDocument;
+        this.cDate = cDate;
+        this.cWorkTitle = cWorkTitle;
+        this.cMgs = cMgs;
+        this.cAddressTitle = cAddressTitle;
+        this.cAppointmentNote = cAppointmentNote;
+        this.cRate = cRate;
     }
 
-    public String getVname() {
-        return vname;
+    public String getAbout() {
+        return about;
     }
 
-    public void setVname(String vname) {
-        this.vname = vname;
+    public void setAbout(String about) {
+        this.about = about;
     }
 
-    public String getPrice() {
-        return price;
+    public String getvDocuments() {
+        return vDocuments;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setvDocuments(String vDocuments) {
+        this.vDocuments = vDocuments;
     }
 
-    public String getRating() {
-        return rating;
+    public String getvEmail() {
+        return vEmail;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setvEmail(String vEmail) {
+        this.vEmail = vEmail;
     }
 
-    public String getRate() {
-        return rate;
+    public String getvMgs() {
+        return vMgs;
     }
 
-    public void setRate(String rate) {
-        this.rate = rate;
+    public void setvMgs(String vMgs) {
+        this.vMgs = vMgs;
     }
 
-    public String getSname() {
-        return sname;
+    public String getRateType() {
+        return rateType;
     }
 
-    public void setSname(String sname) {
-        this.sname = sname;
+    public void setRateType(String rateType) {
+        this.rateType = rateType;
     }
 
-    public String getVimage() {
-        return vimage;
+    public String getvRating() {
+        return vRating;
     }
 
-    public void setVimage(String vimage) {
-        this.vimage = vimage;
+    public void setvRating(String vRating) {
+        this.vRating = vRating;
     }
 
-    public String getDistance() {
-        return distance;
+    public String getServiceDec() {
+        return serviceDec;
     }
 
-    public void setDistance(String distance) {
-        this.distance = distance;
+    public void setServiceDec(String serviceDec) {
+        this.serviceDec = serviceDec;
     }
 
-    public String getVaddress() {
-        return vaddress;
+    public String getServiceName() {
+        return serviceName;
     }
 
-    public void setVaddress(String vaddress) {
-        this.vaddress = vaddress;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 
-    public String getCphone() {
-        return cphone;
+    public String getvAddress() {
+        return vAddress;
     }
 
-    public void setCphone(String cphone) {
-        this.cphone = cphone;
+    public void setvAddress(String vAddress) {
+        this.vAddress = vAddress;
     }
 
-    public String getVphone() {
-        return vphone;
+    public String getvDistance() {
+        return vDistance;
     }
 
-    public void setVphone(String vphone) {
-        this.vphone = vphone;
+    public void setvDistance(String vDistance) {
+        this.vDistance = vDistance;
     }
 
-    public String getCname() {
-        return cname;
+    public String getvImage() {
+        return vImage;
     }
 
-    public void setCname(String cname) {
-        this.cname = cname;
+    public void setvImage(String vImage) {
+        this.vImage = vImage;
     }
 
-    public String getCaddress() {
-        return caddress;
+    public String getvName() {
+        return vName;
     }
 
-    public void setCaddress(String caddress) {
-        this.caddress = caddress;
+    public void setvName(String vName) {
+        this.vName = vName;
     }
 
-    public String getCimage() {
-        return cimage;
+    public String getvRate() {
+        return vRate;
     }
 
-    public void setCimage(String cimage) {
-        this.cimage = cimage;
+    public void setvRate(String vRate) {
+        this.vRate = vRate;
     }
 
-    public String getWorktitle() {
-        return worktitle;
+    public String getvAge() {
+        return vAge;
     }
 
-    public void setWorktitle(String worktitle) {
-        this.worktitle = worktitle;
+    public void setvAge(String vAge) {
+        this.vAge = vAge;
     }
 
-    public String getCemail() {
-        return cemail;
+    public String getvDate() {
+        return vDate;
     }
 
-    public void setCemail(String cemail) {
-        this.cemail = cemail;
+    public void setvDate(String vDate) {
+        this.vDate = vDate;
     }
 
-    public String getDate() {
-        return date;
+    public String getcImage() {
+        return cImage;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setcImage(String cImage) {
+        this.cImage = cImage;
+    }
+
+    public String getcName() {
+        return cName;
+    }
+
+    public void setcName(String cName) {
+        this.cName = cName;
+    }
+
+    public String getcEmail() {
+        return cEmail;
+    }
+
+    public void setcEmail(String cEmail) {
+        this.cEmail = cEmail;
+    }
+
+    public String getcPhone() {
+        return cPhone;
+    }
+
+    public void setcPhone(String cPhone) {
+        this.cPhone = cPhone;
+    }
+
+    public String getcAddress() {
+        return cAddress;
+    }
+
+    public void setcAddress(String cAddress) {
+        this.cAddress = cAddress;
+    }
+
+    public String getcRating() {
+        return cRating;
+    }
+
+    public void setcRating(String cRating) {
+        this.cRating = cRating;
+    }
+
+    public String getcDocument() {
+        return cDocument;
+    }
+
+    public void setcDocument(String cDocument) {
+        this.cDocument = cDocument;
+    }
+
+    public String getcDate() {
+        return cDate;
+    }
+
+    public void setcDate(String cDate) {
+        this.cDate = cDate;
+    }
+
+    public String getcWorkTitle() {
+        return cWorkTitle;
+    }
+
+    public void setcWorkTitle(String cWorkTitle) {
+        this.cWorkTitle = cWorkTitle;
+    }
+
+    public String getcMgs() {
+        return cMgs;
+    }
+
+    public void setcMgs(String cMgs) {
+        this.cMgs = cMgs;
+    }
+
+    public String getcAddressTitle() {
+        return cAddressTitle;
+    }
+
+    public void setcAddressTitle(String cAddressTitle) {
+        this.cAddressTitle = cAddressTitle;
+    }
+
+    public String getcAppointmentNote() {
+        return cAppointmentNote;
+    }
+
+    public void setcAppointmentNote(String cAppointmentNote) {
+        this.cAppointmentNote = cAppointmentNote;
+    }
+
+    public String getcRate() {
+        return cRate;
+    }
+
+    public void setcRate(String cRate) {
+        this.cRate = cRate;
     }
 }
