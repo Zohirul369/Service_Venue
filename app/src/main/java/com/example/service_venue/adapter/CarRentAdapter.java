@@ -1,22 +1,32 @@
 package com.example.service_venue.adapter;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.service_venue.R;
+import com.example.service_venue.VendorProfile;
 import com.example.service_venue.ViewModel;
+import com.example.service_venue.confirmOrder.ConfirmOrderActivity;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -36,9 +46,9 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
         Glide.with(holder.img.getContext())
                 .load(model.getVimage())
-                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
+                .placeholder(R.drawable.logo)
                 .circleCrop()
-                .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
+                .error(R.drawable.logo)
                 .into(holder.img);
 
         holder.view_profile.setOnClickListener(new View.OnClickListener() {
@@ -72,13 +82,17 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 Glide.with(view.getContext())
                         .load(model.getVimage())
                         .placeholder(R.drawable.logo) // Placeholder image for Glide
-                        .error(R.drawable.login) // Error image for Glide
+                        .error(R.drawable.logo) // Error image for Glide
                         .circleCrop()
                         .into(vimage); // Load the image into the ImageView in the dialog
 
+
                 dialogPlus.show();
+
+
             }
         });
+
 
     }
 
@@ -91,8 +105,8 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
     static class myViewHolder extends RecyclerView.ViewHolder {
         CircleImageView img;
-        TextView vname, rating, distance, rate, worktitle,vfname;
-        Button view_profile;
+        TextView vname, rating, distance, rate, worktitle, vfname;
+        Button view_profile,btn_book_now;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -106,6 +120,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             vfname = itemView.findViewById(R.id.vfname);
 
             view_profile = (Button) itemView.findViewById(R.id.view_profile);
+            btn_book_now = (Button) itemView.findViewById(R.id.btn_book_now);
         }
     }
 }
