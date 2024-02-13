@@ -44,12 +44,13 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
+
         holder.view_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.activity_order_first_page))
-                        .setExpanded(true,1400)
+                        .setExpanded(true,1000)
                         .create();
 
                 dialogPlus.show();
@@ -78,7 +79,7 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
             img = (CircleImageView)itemView.findViewById(R.id.c_imageview);
             cName = (TextView)itemView.findViewById(R.id.cname);
             cWorkTitle = (TextView)itemView.findViewById(R.id.worktitle);
-            cDate = (TextView)itemView.findViewById(R.id.date);
+            cDate = (TextView)itemView.findViewById(R.id.cdate);
 
             view_order = (Button) itemView.findViewById(R.id.btn_view_order);
 

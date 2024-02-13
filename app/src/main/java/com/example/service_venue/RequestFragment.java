@@ -11,12 +11,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.service_venue.fragment.UpComingFragment;
 import com.example.service_venue.fragment.CompletedFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class RequestFragment extends Fragment {
 
-    private FrameLayout fragmentView;
+    private FrameLayout frameLayout;
     private TabLayout tabLayout;
 
     @Nullable
@@ -26,7 +27,7 @@ public class RequestFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_request, container, false);
 
         // Initialize views
-        fragmentView = view.findViewById(R.id.frame_layout);
+        frameLayout = view.findViewById(R.id.frame_layout);
         tabLayout = view.findViewById(R.id.tab_layout);
 
         // Initialize default fragment

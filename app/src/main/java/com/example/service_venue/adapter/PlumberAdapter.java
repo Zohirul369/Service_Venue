@@ -28,14 +28,14 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAdapter.myViewHolder> {
+public class PlumberAdapter extends FirebaseRecyclerAdapter<ViewModel, PlumberAdapter.myViewHolder> {
 
-    public CarRentAdapter(@NonNull FirebaseRecyclerOptions<ViewModel> options) {
+    public PlumberAdapter(@NonNull FirebaseRecyclerOptions<ViewModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull CarRentAdapter.myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ViewModel model) {
+    protected void onBindViewHolder(@NonNull PlumberAdapter.myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ViewModel model) {
         holder.vName.setText(model.getvName());
         holder.vRate.setText(model.getvRate());
         holder.vRating.setText(model.getvRating());
@@ -54,7 +54,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.activity_vendor_profile))
-                        .setExpanded(true, 1400)
+                        .setExpanded(true, 1100)
                         .create();
 
                 View view = dialogPlus.getHolderView();
@@ -67,7 +67,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 TextView vfname = view.findViewById(R.id.vfname);
 
 
-                CircleImageView vImage = view.findViewById(R.id.v_imageview); // assuming the ImageView ID is 'image_in_dialog'
+                CircleImageView vimage = view.findViewById(R.id.v_imageview); // assuming the ImageView ID is 'image_in_dialog'
 
                 vname.setText(model.getvName());
                 rate.setText(model.getvRate());
@@ -84,7 +84,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                         .placeholder(R.drawable.logo) // Placeholder image for Glide
                         .error(R.drawable.logo) // Error image for Glide
                         .circleCrop()
-                        .into(vImage); // Load the image into the ImageView in the dialog
+                        .into(vimage); // Load the image into the ImageView in the dialog
 
 
                 dialogPlus.show();
@@ -163,9 +163,9 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
     @NonNull
     @Override
-    public CarRentAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PlumberAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_item, parent, false);
-        return new CarRentAdapter.myViewHolder(view);
+        return new PlumberAdapter.myViewHolder(view);
     }
 
     static class myViewHolder extends RecyclerView.ViewHolder {
