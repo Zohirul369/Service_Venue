@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".UserSignup">
+    tools:context=".UserSignupOTP">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="Sign In"
+                android:text="OTP Verification"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -55,7 +57,7 @@
             android:layout_height="32dp"
             android:layout_margin="10dp"
             android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/purple_500">
+            android:backgroundTint="@color/light_gray">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -66,11 +68,13 @@
                 android:textSize="18sp" />
         </RelativeLayout>
         <RelativeLayout
+
+            android:layout_marginTop="20dp"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_margin="10dp"
             android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/light_gray">
+            android:backgroundTint="@color/purple_500">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -91,60 +95,53 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="3"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:text="3"/>
         </RelativeLayout>
     </LinearLayout>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
+        android:textSize="15sp"
         android:layout_marginTop="20dp"
-        android:text="Mobile number"
-        android:textSize="12sp"
-        android:textColor="@color/grey"
-        android:textStyle="bold" />
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="Enter OTP sent to your phone no" />
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="50dp"
+        android:text="Enter OTP"
+        android:textColor="@color/grey"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/vendor_signup_otp_otpEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="90dp"
+        android:hint="123456"
+        android:inputType="number"
 
-        <com.hbb20.CountryCodePicker
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:ccp_showNameCode="false"
-            android:layout_gravity="center"
-            app:ccp_textSize="17sp"
-            android:layout_marginLeft="20dp"
-            app:ccp_defaultNameCode="BD"
-            android:id="@+id/user_signup_countrycode"
-            />
-
-        <EditText
-            android:id="@+id/signup_mobileno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="1*********"
-            android:layout_marginLeft="-6dp"
-            android:inputType="phone"
-            android:textSize="17sp"
-            android:textColor="@color/black" />
-    </LinearLayout>
+        android:textColor="@color/black" />
 
     <Button
-        android:id="@+id/user_signup_send_otpBtn"
+        android:id="@+id/vendor_signup_otp_nextBtn"
         android:layout_width="250dp"
-        android:backgroundTint="@color/purple_500"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/purple_500"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center"
-        android:text="Send OTP"/>
+        android:text="NEXT"
+        android:textColor="@color/white" />
 
     <ProgressBar
         android:layout_marginTop="15dp"
@@ -152,7 +149,20 @@
         android:layout_height="wrap_content"
         android:indeterminateTint="@color/purple_500"
         android:layout_gravity="center"
-        android:id="@+id/user_signup_progressbar"
+        android:id="@+id/user_signup_otp_progressbar"
+        />
+
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP in 10 second"
+        android:id="@+id/user_signup_otp_resend"
+
         />
 
 </LinearLayout>

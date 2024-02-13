@@ -41,7 +41,7 @@ public class Splash_Screen extends AppCompatActivity {
             @Override
             public void run() {
                 // Start LoginActivity after the splash screen timeout
-                Intent loginIntent = new Intent(Splash_Screen.this, MainActivity.class);
+                Intent loginIntent = new Intent(Splash_Screen.this, UserSignup.class);
                  startActivity(loginIntent);
 
                 // Close the splash screen activity

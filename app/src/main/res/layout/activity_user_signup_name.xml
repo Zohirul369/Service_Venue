@@ -13,27 +13,15 @@
         android:background="@color/purple_500"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <ImageView
+            android:id="@+id/signup_back"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_left" />
 
-            <ImageView
-                android:id="@+id/signup_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_left" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:text="Sign In"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </LinearLayout>
 
         <ImageView
             android:layout_width="match_parent"
@@ -44,15 +32,62 @@
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter name to continue"
-        android:gravity="center"
-        android:textColor="@color/grey"
-        android:textSize="17sp"
         android:layout_marginTop="20dp"
-        />
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/light_gray">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/light_gray">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/purple_500">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -60,8 +95,8 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
         android:text="Your name"
-        android:textSize="10sp"
         android:textColor="@color/grey"
+        android:textSize="10sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -73,30 +108,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:src="@drawable/pen" />
 
         <EditText
-            android:id="@+id/signup_name"
+            android:id="@+id/user_signup_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="60dp"
             android:hint="Enter your name"
             android:inputType="textPersonName"
-            android:textSize="17sp"
             android:text="Alex John"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="17sp" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/user_signup_continueBtn"
         android:layout_width="250dp"
-        android:backgroundTint="@color/purple_500"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/purple_500"
         android:gravity="center"
-        android:text="Continue"/>
+        android:text="Continue" />
+
+    <ProgressBar
+        android:id="@+id/user_signup_progressbarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:indeterminateTint="@color/purple_500" />
 
 
 </LinearLayout>
