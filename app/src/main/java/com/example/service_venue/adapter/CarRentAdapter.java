@@ -133,7 +133,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                         map.put("cPhone",cPhone.getText().toString());
                         map.put("cAddress",cAddress.getText().toString());
                         map.put("cAddressTitle",cAddressTitle.getText().toString());
-                        //map.put("cAppointmentNote",cAppointmentNote.getText().toString());
+                        map.put("cAppointmentNote",cAppointmentNote.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("serviceVenue").child("request")
                                 .child(getRef(position).getKey()).updateChildren(map)
@@ -157,9 +157,6 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
             }
         });
-
-
-
 
 
     }
