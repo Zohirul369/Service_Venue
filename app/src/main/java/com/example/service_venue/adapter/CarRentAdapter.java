@@ -1,7 +1,6 @@
 package com.example.service_venue.adapter;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.service_venue.R;
-import com.example.service_venue.VendorProfile;
 import com.example.service_venue.ViewModel;
-import com.example.service_venue.confirmOrder.ConfirmOrderActivity;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -39,12 +36,10 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
     @Override
     protected void onBindViewHolder(@NonNull CarRentAdapter.myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ViewModel model) {
-        holder.vname.setText(model.getvName());
-        holder.rate.setText(model.getvRate());
-        holder.rating.setText(model.getvRating());
-        holder.distance.setText(model.getvDistance());
-
-
+        holder.vName.setText(model.getvName());
+        holder.vRate.setText(model.getvRate());
+        holder.vRating.setText(model.getvRating());
+        holder.vDistance.setText(model.getvDistance());
 
 
         Glide.with(holder.img.getContext())
@@ -68,7 +63,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 TextView rating = view.findViewById(R.id.rating);
                 TextView distance = view.findViewById(R.id.distance);
                 TextView rate = view.findViewById(R.id.rate);
-                TextView worktitle = view.findViewById(R.id.worktitle);
+                TextView serviceName = view.findViewById(R.id.worktitle);
                 TextView vfname = view.findViewById(R.id.vfname);
 
 
@@ -78,7 +73,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 rate.setText(model.getvRate());
                 distance.setText(model.getvDistance());
                 rating.setText(model.getvRating());
-                worktitle.setText(model.getServiceName());
+                serviceName.setText(model.getServiceName());
                 vfname.setText(model.getvName());
 
 
@@ -98,6 +93,72 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             }
         });
 
+        holder.btn_book_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
+                        .setContentHolder(new ViewHolder(R.layout.activity_confirm_order))
+                        .setExpanded(true,1400)
+                        .create();
+
+                View view = dialogPlus.getHolderView();
+
+                EditText cName = view.findViewById(R.id.cname);
+                EditText cDate  = view.findViewById(R.id.cdate);
+                EditText cPhone = view.findViewById(R.id.cphone);
+                EditText cAddress = view.findViewById(R.id.caddress);
+                EditText cAddressTitle = view.findViewById(R.id.address_title);
+                EditText cAppointmentNote = view.findViewById(R.id.appointment_note);
+
+
+                //TextView image = view.findViewById(R.id.c_imageview);
+
+                Button btn_confirm = view.findViewById(R.id.btn_confirm);
+
+                cName.setText(model.getcName());
+                cDate.setText(model.getcDate());
+                cPhone.setText(model.getcPhone());
+                cAddress.setText(model.getcAddress());
+                cAddressTitle.setText(model.getcAddressTitle());
+                cAppointmentNote.setText(model.getcAppointmentNote());
+
+                dialogPlus.show();
+
+                btn_confirm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Map<String,Object> map = new HashMap<>();
+                        map.put("cName",cName.getText().toString());
+                        map.put("cDate",cDate.getText().toString());
+                        map.put("cPhone",cPhone.getText().toString());
+                        map.put("cAddress",cAddress.getText().toString());
+                        map.put("cAddressTitle",cAddressTitle.getText().toString());
+                        //map.put("cAppointmentNote",cAppointmentNote.getText().toString());
+
+                        FirebaseDatabase.getInstance().getReference().child("serviceVenue").child("request")
+                                .child(getRef(position).getKey()).updateChildren(map)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(holder.vName.getContext(), "Data Update Successfully.", Toast.LENGTH_SHORT).show();
+                                        dialogPlus.dismiss();
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(Exception e) {
+                                        Toast.makeText(holder.vName.getContext(), "Error. Please try again", Toast.LENGTH_SHORT).show();
+                                        dialogPlus.dismiss();
+                                    }
+                                });
+                    }
+                });
+
+
+            }
+        });
+
+
 
 
 
@@ -112,20 +173,20 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
     static class myViewHolder extends RecyclerView.ViewHolder {
         CircleImageView img;
-        TextView vname, rating, distance, rate, worktitle, vfname;
+        TextView vName, vRating, vDistance, vRate, serviceName, vfname;
         Button btn_view_profile,btn_book_now;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
             img = itemView.findViewById(R.id.v_imageview);
-            vname = itemView.findViewById(R.id.vname);
-            rating = itemView.findViewById(R.id.rating);
-            distance = itemView.findViewById(R.id.distance);
-            rate = itemView.findViewById(R.id.rate);
-            worktitle = itemView.findViewById(R.id.worktitle);
+            vName = itemView.findViewById(R.id.vname);
+            vRating = itemView.findViewById(R.id.rating);
+            vDistance = itemView.findViewById(R.id.distance);
+            vRate = itemView.findViewById(R.id.rate);
+            serviceName = itemView.findViewById(R.id.worktitle);
             vfname = itemView.findViewById(R.id.vfname);
-            vfname = itemView.findViewById(R.id.vfname);
-            vfname = itemView.findViewById(R.id.vfname);
+
+
 
             btn_view_profile = (Button) itemView.findViewById(R.id.btn_view_profile);
             btn_book_now = (Button) itemView.findViewById(R.id.btn_book_now);

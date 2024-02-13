@@ -31,7 +31,7 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull ViewModel model) {
         holder.cName.setText(model.getcName());
-        holder.cWorktile.setText(model.getcWorkTitle());
+        holder.cWorkTitle.setText(model.getcWorkTitle());
         holder.cDate.setText(model.getcDate());
 
 
@@ -48,7 +48,7 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
             @Override
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.order_first_view))
+                        .setContentHolder(new ViewHolder(R.layout.activity_order_first_page))
                         .setExpanded(true,1400)
                         .create();
 
@@ -67,7 +67,7 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
     }
     class myViewHolder extends RecyclerView.ViewHolder{
         CircleImageView img;
-        TextView cName, cWorktile, cDate;
+        TextView cName, cWorkTitle, cDate;
 
         Button view_order;
 
@@ -77,10 +77,10 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
 
             img = (CircleImageView)itemView.findViewById(R.id.c_imageview);
             cName = (TextView)itemView.findViewById(R.id.cname);
-            cWorktile = (TextView)itemView.findViewById(R.id.worktitle);
+            cWorkTitle = (TextView)itemView.findViewById(R.id.worktitle);
             cDate = (TextView)itemView.findViewById(R.id.date);
 
-            view_order = (Button) itemView.findViewById(R.id.view_order);
+            view_order = (Button) itemView.findViewById(R.id.btn_view_order);
 
 
         }

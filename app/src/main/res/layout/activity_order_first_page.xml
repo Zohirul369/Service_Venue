@@ -10,10 +10,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:elevation="6dp"
         app:cardCornerRadius="6dp"
-        app:cardUseCompatPadding="true">
+        android:elevation="6dp"
+        app:cardUseCompatPadding="true"
+        android:background="@color/white">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:padding="15dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/p_imageview"
+                android:id="@+id/c_imageview"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@mipmap/ic_launcher"
@@ -36,7 +36,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@id/p_imageview"
+                android:layout_toRightOf="@id/c_imageview"
                 android:text="name"
                 android:textColor="@color/blue"
                 android:textSize="20dp"
@@ -52,21 +52,41 @@
 
             <TextView
                 android:id="@+id/text_job_task"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/vname"
                 android:layout_marginStart="10dp"
-                android:layout_toRightOf="@id/p_imageview"
+                android:layout_below="@id/vname"
+                android:layout_toRightOf="@id/c_imageview"
                 android:text="Job Task" />
 
             <TextView
                 android:id="@+id/job_task"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_job_task"
+                android:layout_toRightOf="@id/c_imageview"
+                android:layout_marginStart="10dp"
+                android:text="Tab Wash"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_address_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vname"
+                android:layout_toRightOf="@id/text_job_task"
+                android:text="Address Title" />
+
+            <TextView
+                android:id="@+id/address_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_job_task"
-                android:layout_marginStart="10dp"
-                android:layout_toRightOf="@id/p_imageview"
-                android:text="Tab Wash"
+                android:layout_toRightOf="@id/job_task"
+                android:layout_marginStart="0dp"
+                android:text="Home"
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -78,16 +98,16 @@
                 android:layout_below="@id/job_task"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/p_imageview"
+                android:layout_toRightOf="@id/c_imageview"
                 android:text="Date" />
 
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/c_imageview"
                 android:layout_below="@id/text_date"
                 android:layout_marginStart="10dp"
-                android:layout_toRightOf="@id/p_imageview"
                 android:text="04/02/2024"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -99,7 +119,7 @@
                 android:layout_below="@id/date"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/p_imageview"
+                android:layout_toRightOf="@id/c_imageview"
                 android:text="Address" />
 
             <TextView
@@ -107,8 +127,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_address"
+                android:layout_toRightOf="@id/c_imageview"
                 android:layout_marginStart="10dp"
-                android:layout_toRightOf="@id/p_imageview"
                 android:text="Dhaka,Gazipur"
                 android:textColor="@color/black"
                 android:textStyle="bold" />

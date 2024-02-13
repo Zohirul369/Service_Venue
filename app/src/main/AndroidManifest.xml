@@ -19,7 +19,6 @@
         <activity
             android:name=".confirmOrder.ConfirmOrderActivity"
             android:exported="false" />
-
         <activity
             android:name=".UserSignup"
             android:exported="false" />
