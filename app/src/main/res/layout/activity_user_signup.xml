@@ -133,7 +133,6 @@
             android:layout_marginLeft="-6dp"
             android:inputType="phone"
             android:textSize="17sp"
-            android:text="1631913617"
             android:textColor="@color/black" />
     </LinearLayout>
 
