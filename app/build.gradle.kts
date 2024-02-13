@@ -76,6 +76,8 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("com.google.firebase:firebase-auth")
 
+    //add manually
+    implementation("com.google.firebase:firebase-firestore:24.10.2")
 
 
 }
