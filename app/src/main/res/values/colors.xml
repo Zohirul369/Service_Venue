@@ -29,4 +29,11 @@
 
     <color name="tab_selected">#7f40bd</color>
 
+
+    <color name="off_white">#FAFAFA</color>
+    <color name="light_gray">#C3C3C3</color>
+
+    <color name="my_primary">#FF5964</color>
+    <color name="my_secondary">#FFE74C</color>
+
 </resources>
