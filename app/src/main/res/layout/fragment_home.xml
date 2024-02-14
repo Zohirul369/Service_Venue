@@ -9,13 +9,12 @@
     tools:context=".Home_Fragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profile_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:id="@+id/profile_login"
         android:backgroundTint="@color/red"
-        android:src="@drawable/login_icon">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        android:src="@drawable/login_icon"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
     <ScrollView
@@ -27,39 +26,42 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
 
-                <ImageView
-                    android:id="@+id/slider"
-                    android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/sliderimages" />
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="1000"
+                    app:iss_period="1000"
+                    app:iss_text_align="CENTER" />
 
-                <EditText
-                    android:id="@+id/search_bar_opt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginEnd="40dp"
-                    android:background="@drawable/background_solid_white"
-                    android:drawableStart="@drawable/baseline_search_24"
-                    android:drawablePadding="10dp"
-                    android:ems="10"
-                    android:hint="Search"
-                    android:inputType="text"
-                    android:padding="10dp"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="@+id/slider"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/slider" />
+                <!--                <EditText-->
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--                    android:id="@+id/search_bar_opt"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="40dp"-->
+                <!--                    android:layout_marginEnd="40dp"-->
+                <!--                    android:background="@drawable/background_solid_white"-->
+                <!--                    android:drawableStart="@drawable/baseline_search_24"-->
+                <!--                    android:drawablePadding="10dp"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:hint="Search"-->
+                <!--                    android:inputType="text"-->
+                <!--                    android:padding="10dp"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/smartSlider"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/smartSlider" />-->
+
+            </RelativeLayout>
 
 
             <TextView
