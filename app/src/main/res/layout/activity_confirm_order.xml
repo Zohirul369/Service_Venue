@@ -32,7 +32,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:text="Name"
+                android:text="Your Name"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -45,6 +45,27 @@
                 android:background="@drawable/rounded"
                 android:gravity="center"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Service Title"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/worktitle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -142,7 +163,7 @@
             <EditText
                 android:id="@+id/appointment_note"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/rounded"

@@ -98,7 +98,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.activity_confirm_order))
-                        .setExpanded(true,1000)
+                        .setExpanded(true,1400)
                         .create();
 
                 View view = dialogPlus.getHolderView();
@@ -109,13 +109,14 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 EditText cAddress = view.findViewById(R.id.caddress);
                 EditText cAddressTitle = view.findViewById(R.id.address_title);
                 EditText cAppointmentNote = view.findViewById(R.id.appointment_note);
-
+                EditText serviceName = view.findViewById(R.id.worktitle);
 
                 //TextView image = view.findViewById(R.id.c_imageview);
 
                 Button btn_confirm = view.findViewById(R.id.btn_confirm);
 
                 cName.setText(model.getcName());
+                serviceName.setText(model.getServiceName());
                 cDate.setText(model.getcDate());
                 cPhone.setText(model.getcPhone());
                 cAddress.setText(model.getcAddress());
@@ -129,6 +130,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                     public void onClick(View v) {
                         Map<String,Object> map = new HashMap<>();
                         map.put("cName",cName.getText().toString());
+                        map.put("serviceName",serviceName.getText().toString());
                         map.put("cDate",cDate.getText().toString());
                         map.put("cPhone",cPhone.getText().toString());
                         map.put("cAddress",cAddress.getText().toString());
