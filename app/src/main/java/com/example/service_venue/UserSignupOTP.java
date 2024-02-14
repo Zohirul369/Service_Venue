@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class UserSignupOTP extends AppCompatActivity {
@@ -63,8 +65,12 @@ public class UserSignupOTP extends AppCompatActivity {
     }
 
     void sendOtp(String phoneNumber, boolean isResend) {
-        startResendTimer();
-        setInProgress(true);
+        if (!isResend) {
+            // Show progress bar only if it's not a resend
+            setInProgress(true);
+        }
+        startResendTimer(); // Start timer for resend option
+
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phoneNumber,
                 timeoutSeconds,
@@ -74,7 +80,6 @@ public class UserSignupOTP extends AppCompatActivity {
                     @Override
                     public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                         signIn(phoneAuthCredential);
-                        setInProgress(false);
                     }
 
                     @Override
@@ -89,7 +94,7 @@ public class UserSignupOTP extends AppCompatActivity {
                         verificationCode = s;
                         resendingToken = forceResendingToken;
                         AndroidUtil.showToast(getApplicationContext(), "OTP sent successfully");
-                        setInProgress(false);
+                        setInProgress(false); // Hide progress bar after OTP is sent
                     }
                 }
         );
@@ -113,7 +118,7 @@ public class UserSignupOTP extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 setInProgress(false);
                 if (task.isSuccessful()) {
-                    Intent intent = new Intent(UserSignupOTP.this, UserSignupName.class);
+                    Intent intent = new Intent(UserSignupOTP.this, MainActivity.class);
                     intent.putExtra("phone", phoneNumber);
                     startActivity(intent);
                 } else {
@@ -125,15 +130,29 @@ public class UserSignupOTP extends AppCompatActivity {
 
     void startResendTimer() {
         user_signup_otp_resend.setEnabled(false);
-        android.os.CountDownTimer timer = new android.os.CountDownTimer(60000, 1000) {
-            public void onTick(long millisUntilFinished) {
-                user_signup_otp_resend.setText("Resend OTP in " + millisUntilFinished / 1000 + " seconds");
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                timeoutSeconds--;
+                final String timeRemaining = "Resend OTP in " + timeoutSeconds + " seconds";
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        user_signup_otp_resend.setText(timeRemaining);
+                    }
+                });
+                if (timeoutSeconds <= 0) {
+                    timeoutSeconds = 60L;
+                    timer.cancel();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            user_signup_otp_resend.setEnabled(true);
+                        }
+                    });
+                }
             }
-
-            public void onFinish() {
-                user_signup_otp_resend.setEnabled(true);
-                user_signup_otp_resend.setText("Resend OTP");
-            }
-        }.start();
+        }, 0, 1000);
     }
 }
