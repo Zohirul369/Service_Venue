@@ -11,7 +11,6 @@ import com.example.service_venue.confirmOrder.ConfirmOrderActivity;
 
 public class VendorProfile extends AppCompatActivity {
 
-    Button btn_bookNow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

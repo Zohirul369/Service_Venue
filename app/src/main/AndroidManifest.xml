@@ -17,6 +17,15 @@
         android:theme="@style/Theme.Service_Venue"
         tools:targetApi="31">
         <activity
+            android:name=".order.OrderSeconPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".service.add.CarAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".service.add.AddCarRent"
+            android:exported="false" />
+        <activity
             android:name=".UserSignupName"
             android:exported="false" />
         <activity
@@ -32,7 +41,7 @@
             android:name=".order.OrderFirstPageActivity"
             android:exported="false" />
         <activity
-            android:name=".viewOrder.ViewOrderSecondActivity"
+            android:name=".order.ViewOrderSecondActivity"
             android:exported="false" />
         <activity
             android:name=".viewOrder.ViewOrderFirstActivity"
@@ -40,7 +49,6 @@
         <activity
             android:name=".VendorProfile"
             android:exported="false" />
-
         <activity
             android:name=".service.BeautyParlourService"
             android:exported="false" />
@@ -73,20 +81,15 @@
             android:exported="false" />
         <activity
             android:name=".Splash_Screen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" >
-
         </activity>
 
         <meta-data

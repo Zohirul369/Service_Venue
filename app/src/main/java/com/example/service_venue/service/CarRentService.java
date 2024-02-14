@@ -1,23 +1,19 @@
 package com.example.service_venue.service;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.service_venue.R;
 import com.example.service_venue.ViewModel;
 import com.example.service_venue.adapter.CarRentAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class CarRentService extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CarRentAdapter carRentAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +30,7 @@ public class CarRentService extends AppCompatActivity {
 
         carRentAdapter = new CarRentAdapter(options);
         recyclerView.setAdapter(carRentAdapter);
+
 
     }
 
