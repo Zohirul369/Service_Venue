@@ -53,7 +53,7 @@ public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAd
                         .setExpanded(true,1000)
                         .create();
 
-                dialogPlus.show();
+
 
             }
         });

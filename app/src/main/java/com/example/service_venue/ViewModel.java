@@ -1,13 +1,15 @@
 package com.example.service_venue;
 
 public class ViewModel {
-    String about,vDocuments,vEmail,vMgs,rateType,vRating,serviceDec,serviceName,vAddress,vDistance,vImage,vName,vRate,vAge,vDate,cImage,cName, cEmail,cPhone,cAddress,cRating,cDocument,cDate,cWorkTitle,cMgs,cAddressTitle,cAppointmentNote,cRate;
+    String about,vPhone,vDocuments,vEmail,vMgs,rateType,vRating,serviceDec,serviceName,vAddress,vDistance,vImage,vName,vRate,vAge,vDate,cImage,cName, cEmail,cPhone,cAddress,cRating,cDocument,cDate,cWorkTitle,cMgs,cAddressTitle,cAppointmentNote,cRate;
 
     ViewModel(){
 
     }
-    public ViewModel(String about, String vDocuments, String vEmail, String vMgs, String rateType, String vRating, String serviceDec, String serviceName, String vAddress, String vDistance, String vImage, String vName, String vRate, String vAge, String vDate, String cImage, String cName, String cEmail, String cPhone, String cAddress, String cRating, String cDocument, String cDate, String cWorkTitle, String cMgs, String cAddressTitle, String cAppointmentNote, String cRate) {
+
+    public ViewModel(String about, String vPhone, String vDocuments, String vEmail, String vMgs, String rateType, String vRating, String serviceDec, String serviceName, String vAddress, String vDistance, String vImage, String vName, String vRate, String vAge, String vDate, String cImage, String cName, String cEmail, String cPhone, String cAddress, String cRating, String cDocument, String cDate, String cWorkTitle, String cMgs, String cAddressTitle, String cAppointmentNote, String cRate) {
         this.about = about;
+        this.vPhone = vPhone;
         this.vDocuments = vDocuments;
         this.vEmail = vEmail;
         this.vMgs = vMgs;
@@ -35,6 +37,14 @@ public class ViewModel {
         this.cAddressTitle = cAddressTitle;
         this.cAppointmentNote = cAppointmentNote;
         this.cRate = cRate;
+    }
+
+    public String getvPhone() {
+        return vPhone;
+    }
+
+    public void setvPhone(String vPhone) {
+        this.vPhone = vPhone;
     }
 
     public String getAbout() {

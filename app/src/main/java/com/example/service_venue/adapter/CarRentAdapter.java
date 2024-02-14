@@ -65,6 +65,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 TextView rate = view.findViewById(R.id.rate);
                 TextView serviceName = view.findViewById(R.id.worktitle);
                 TextView vfname = view.findViewById(R.id.vfname);
+                TextView vPhone = view.findViewById(R.id.v_phone);
 
 
                 CircleImageView vImage = view.findViewById(R.id.v_imageview); // assuming the ImageView ID is 'image_in_dialog'
@@ -75,6 +76,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
                 rating.setText(model.getvRating());
                 serviceName.setText(model.getServiceName());
                 vfname.setText(model.getvName());
+                vPhone.setText(model.getvPhone());
 
 
                 Button btn_book_now = view.findViewById(R.id.btn_book_now);
@@ -172,7 +174,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
 
     static class myViewHolder extends RecyclerView.ViewHolder {
         CircleImageView img;
-        TextView vName, vRating, vDistance, vRate, serviceName, vfname;
+        TextView vName, vRating, vDistance, vRate, serviceName,vPhone, vfname;
         Button btn_view_profile,btn_book_now;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -184,6 +186,7 @@ public class CarRentAdapter extends FirebaseRecyclerAdapter<ViewModel, CarRentAd
             vRate = itemView.findViewById(R.id.rate);
             serviceName = itemView.findViewById(R.id.worktitle);
             vfname = itemView.findViewById(R.id.vfname);
+            vPhone = itemView.findViewById(R.id.v_phone);
 
 
 
