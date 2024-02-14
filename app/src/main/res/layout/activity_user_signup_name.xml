@@ -120,13 +120,12 @@
             android:layout_marginEnd="60dp"
             android:hint="Enter your name"
             android:inputType="textPersonName"
-            android:text="Alex John"
             android:textColor="@color/black"
             android:textSize="17sp" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/user_signup_continueBtn"
+        android:id="@+id/user_signup_name_continueBtn"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -136,7 +135,7 @@
         android:text="Continue" />
 
     <ProgressBar
-        android:id="@+id/user_signup_progressbarr"
+        android:id="@+id/user_signup_name_progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

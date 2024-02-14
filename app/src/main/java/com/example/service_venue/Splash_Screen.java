@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.example.service_venue.utils.FirebaseUtil;
+
 public class Splash_Screen extends AppCompatActivity {
     private static int SPLASH_TIMEOUT = 4000; // Splash screen timeout in milliseconds
 
@@ -40,11 +42,11 @@ public class Splash_Screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Start LoginActivity after the splash screen timeout
-                Intent loginIntent = new Intent(Splash_Screen.this, UserSignup.class);
-                 startActivity(loginIntent);
-
-                // Close the splash screen activity
+                if(FirebaseUtil.isLoggedIn()){
+                    startActivity(new Intent(Splash_Screen.this,MainActivity.class));
+                }else{
+                    startActivity(new Intent(Splash_Screen.this, UserSignup.class));
+                }
                 finish();
             }
         }, SPLASH_TIMEOUT);
