@@ -79,6 +79,9 @@ dependencies {
     //add manually
     implementation("com.google.firebase:firebase-firestore:24.10.2")
 
+    //Image slider for Home_Fragment
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
 
 }
 apply(plugin = "com.google.gms.google-services")
