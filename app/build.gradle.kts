@@ -83,6 +83,7 @@ dependencies {
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
 
 
+
 }
 apply(plugin = "com.google.gms.google-services")
 apply(plugin = "com.android.application")

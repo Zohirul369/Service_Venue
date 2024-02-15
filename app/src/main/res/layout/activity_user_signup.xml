@@ -45,11 +45,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        >
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
         <RelativeLayout
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -65,6 +65,7 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -80,21 +81,7 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/light_gray">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="3"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </RelativeLayout>
     </LinearLayout>
 
     <TextView
@@ -103,56 +90,53 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:text="Mobile number"
-        android:textSize="12sp"
         android:textColor="@color/grey"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <com.hbb20.CountryCodePicker
+            android:id="@+id/user_signup_countrycode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:ccp_showNameCode="false"
             android:layout_gravity="center"
-            app:ccp_textSize="17sp"
             android:layout_marginLeft="20dp"
             app:ccp_defaultNameCode="BD"
-            android:id="@+id/user_signup_countrycode"
-            />
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="17sp" />
 
         <EditText
             android:id="@+id/signup_mobileno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="1*********"
             android:layout_marginLeft="-6dp"
+            android:hint="1*********"
             android:inputType="phone"
-            android:textSize="17sp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="17sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/user_signup_send_otpBtn"
         android:layout_width="250dp"
-        android:backgroundTint="@color/purple_500"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/purple_500"
         android:gravity="center"
-        android:text="Send OTP"/>
+        android:text="Send OTP" />
 
     <ProgressBar
-        android:layout_marginTop="15dp"
+        android:id="@+id/user_signup_progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/purple_500"
         android:layout_gravity="center"
-        android:id="@+id/user_signup_progressbar"
-        />
+        android:layout_marginTop="15dp"
+        android:indeterminateTint="@color/purple_500" />
 
 </LinearLayout>

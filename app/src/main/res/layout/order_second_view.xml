@@ -16,7 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="217dp"
-            android:background="@color/white"
+            android:background="@color/purple_5000"
             android:padding="15dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -52,8 +52,8 @@
                 android:id="@+id/text_job_task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_below="@id/c_name"
+                android:layout_marginStart="10dp"
                 android:layout_toRightOf="@id/p_imageview"
                 android:text="Job Task" />
 
@@ -62,8 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_job_task"
-                android:layout_toRightOf="@id/p_imageview"
                 android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/p_imageview"
                 android:text="plumber"
                 android:textColor="@color/black"
                 android:textSize="15dp"
@@ -83,9 +83,9 @@
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/p_imageview"
                 android:layout_below="@id/text_date"
                 android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/p_imageview"
                 android:text="04/02/2024"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -105,8 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_address"
-                android:layout_toRightOf="@id/p_imageview"
                 android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/p_imageview"
                 android:text="Dhaka,Gazipur"
                 android:textColor="@color/black"
                 android:textStyle="bold" />

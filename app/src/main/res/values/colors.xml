@@ -15,7 +15,7 @@
     <color name="red1">#fa1302</color>
 
 
-    <color name="purple_500">#FF6200EE</color>
+
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -35,5 +35,8 @@
 
     <color name="my_primary">#FF5964</color>
     <color name="my_secondary">#FFE74C</color>
+
+    <color name="purple_500">#66A5AD</color>
+    <color name="purple_5000">#EDF4F2</color>
 
 </resources>
