@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:background="@color/purple_5000">
+        android:background="@color/white">
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -67,46 +67,11 @@
             android:layout_below="@id/rate"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
-            android:text="2"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-        <TextView
-            android:id="@+id/txt_distance"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/distance"
-            android:layout_below="@id/rate"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="3dp"
-            android:text="km away"
+            android:text="Gazipur"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/rate"
-            android:layout_marginStart="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="3dp"
 
-            android:layout_marginBottom="10dp"
-            android:layout_toRightOf="@id/txt_distance"
-            android:text="2"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-        <TextView
-            android:id="@+id/txt_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="1dp"
-            android:layout_toRightOf="@id/rating"
-            android:layout_below="@id/rate"
-            android:text="⭐"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
         <Button
             android:id="@+id/btn_view_profile"
             android:layout_width="wrap_content"

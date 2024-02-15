@@ -21,7 +21,6 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 import de.hdodenhof.circleimageview.CircleImageView;
-
 public class RequestAdapter extends FirebaseRecyclerAdapter<ViewModel, RequestAdapter.myViewHolder> {
 
     public RequestAdapter(@NonNull FirebaseRecyclerOptions<ViewModel> options) {

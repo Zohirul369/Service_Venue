@@ -17,8 +17,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class UpComingFragment extends Fragment {
 
-    private RecyclerView recyclerView;
-    private RequestAdapter requestAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,29 +24,7 @@ public class UpComingFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_upcoming, container, false);
 
-        recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        FirebaseRecyclerOptions<ViewModel> options =
-                new FirebaseRecyclerOptions.Builder<ViewModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("serviceVenue").child("request"), ViewModel.class)
-                        .build();
-
-        requestAdapter = new RequestAdapter(options);
-        recyclerView.setAdapter(requestAdapter);
-
         return view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        requestAdapter.startListening();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        requestAdapter.stopListening();
-    }
 }

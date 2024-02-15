@@ -20,15 +20,6 @@
             android:name=".ProfileView"
             android:exported="false" />
         <activity
-            android:name=".order.OrderSeconPageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".service.add.CarAddActivity"
-            android:exported="false" />
-        <activity
-            android:name=".service.add.AddCarRent"
-            android:exported="false" />
-        <activity
             android:name=".UserSignupName"
             android:exported="false" />
         <activity
@@ -84,16 +75,16 @@
             android:exported="false" />
         <activity
             android:name=".Splash_Screen"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
 
         <meta-data
             android:name="preloaded_fonts"
