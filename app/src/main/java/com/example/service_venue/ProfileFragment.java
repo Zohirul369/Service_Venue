@@ -25,6 +25,7 @@ import com.squareup.picasso.Picasso;
 
 public class ProfileFragment extends Fragment {
 
+TextView user_view_profile;
 
 
     @Override
@@ -33,6 +34,15 @@ public class ProfileFragment extends Fragment {
         // return inflater.inflate(R.layout.fragment_profile, container, false);
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        user_view_profile = view.findViewById(R.id.user_view_profile);
+
+        user_view_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ProfileView.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
