@@ -13,10 +13,7 @@
         android:id="@+id/bm_home"
         android:title="Home"
         android:icon="@drawable/home"/>
-    <item
-        android:id="@+id/bm_help"
-        android:title="Chats"
-        android:icon="@drawable/help"/>
+
     <item
         android:id="@+id/bm_account"
         android:title="Account"
